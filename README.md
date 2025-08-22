@@ -16,11 +16,14 @@ O site é organizado em rótulos claros, facilitando a navegação e o acesso à
 
 ## Como Trabalhamos: O passo a passo do nosso processo de trabalho, do diagnóstico ao acompanhamento.
 
-## Blog / Central do Cliente: Uma seção que direciona para o nosso conteúdo no Notion, que funciona como uma base de conhecimento sempre atualizada.
+## Blog / Central do Cliente:
+Uma seção que direciona para o nosso conteúdo no Notion, que funciona como uma base de conhecimento sempre atualizada.
 
-## Quem Somos: Nossa missão, visão e valores, mostrando o propósito da agência.
+## Quem Somos:
+Nossa missão, visão e valores, mostrando o propósito da agência.
 
-## Contato: Onde o cliente pode falar diretamente com a gente.
+## Contato:
+Onde o cliente pode falar diretamente com a gente.
 
 # 🛠️ Tecnologias Utilizadas
 
