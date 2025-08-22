@@ -40,11 +40,10 @@ Onde o cliente pode falar diretamente com a gente.
 # 🔗 Links Úteis
 Aqui estão os canais para saber mais sobre a Agência Atthos:
 
-WhatsApp: https://wa.me/5599999999999
+WhatsApp: https://web.whatsapp.com/send?phone=5511965391331
 
-Instagram: https://www.instagram.com/agenciaatthos
+Instagram: https://www.instagram.com/agencia_atthos/
 
-LinkedIn: https://www.linkedin.com/company/agenciaatthos
 
 
 
