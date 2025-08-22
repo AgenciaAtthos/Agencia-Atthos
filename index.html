@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agência Atthos — Da ideia ao resultado</title>
+    <meta name="description" content="Somos uma agência digital focada em soluções práticas para empreendedores e negócios locais.">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        site: {
+                            dark: '#0F1117',
+                            panel: '#151823',
+                            border: '#2A2F3A'
+                        },
+                        lilac: '#C084FC',
+                    },
+                    boxShadow: {
+                        glow: '0 8px 30px rgba(192,132,252,0.15)'
+                    },
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-site-dark text-gray-200 font-inter">
+
+    <header class="fixed top-0 w-full z-50 border-b border-site-border/60 bg-site-dark/70 backdrop-blur supports-[backdrop-filter]:bg-site-dark/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="#top" class="flex items-center gap-2 text-white font-extrabold text-xl">
+                <span>Agência</span><span class="text-lilac">Atthos</span>
+            </a>
+            <nav class="hidden md:flex items-center gap-6 text-sm text-gray-300">
+                <a href="#home" class="hover:text-white">Home</a>
+                <a href="#servicos" class="hover:text-white">Serviços</a>
+                <a href="#trabalho" class="hover:text-white">Como Trabalhamos</a>
+                <a href="#blog" class="hover:text-white">Blog</a>
+                <a href="#sobre" class="hover:text-white">Quem Somos</a>
+                <a href="#contato" class="hover:text-white">Contato</a>
+            </nav>
+            <div class="hidden md:flex items-center">
+                <a href="https://wa.me/5599999999999" target="_blank" rel="noopener" class="btn btn-primary text-sm">
+                    <i data-lucide="message-square" class="w-4 h-4 mr-2"></i> Fale com a gente
+                </a>
+            </div>
+            <button id="menuBtn" class="md:hidden text-white"><i data-lucide="menu" class="w-6 h-6"></i></button>
+        </div>
+        <div id="mobileNav" class="md:hidden hidden border-t border-site-border/60 bg-site-dark">
+            <nav class="px-4 py-4 flex flex-col gap-4 text-sm">
+                <a href="#home" class="hover:text-white">Home</a>
+                <a href="#servicos" class="hover:text-white">Serviços</a>
+                <a href="#trabalho" class="hover:text-white">Como Trabalhamos</a>
+                <a href="#blog" class="hover:text-white">Blog</a>
+                <a href="#sobre" class="hover:text-white">Quem Somos</a>
+                <a href="#contato" class="hover:text-white">Contato</a>
+                <a href="https://wa.me/5599999999999" target="_blank" rel="noopener" class="btn btn-primary mt-2">Fale no WhatsApp</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="home" class="pt-24 gradient-x">
+
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 text-center">
+            <div class="max-w-3xl mx-auto">
+                <h1 class="text-4xl sm:text-5xl font-extrabold text-white leading-tight">
+                    Somos uma agência digital focada em <span class="text-lilac">soluções práticas</span> para empreendedores e negócios locais.
+                </h1>
+                <p class="mt-5 text-lg text-gray-300">
+                    Ajudamos você a ganhar mais autonomia, organizar o que precisa ser feito e gerar resultados de verdade, sem complicação.
+                </p>
+                <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
+                    <a href="#servicos" class="btn btn-primary shadow-glow">Conheça nossas soluções</a>
+                    <a href="https://wa.me/5599999999999" target="_blank" rel="noopener" class="btn btn-ghost">Fale no WhatsApp</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 lg:py-24 border-t border-site-border/60">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl sm:text-4xl font-bold text-white mb-10">Por que escolher a Atthos?</h2>
+                <p class="text-lg text-gray-300 max-w-4xl mx-auto mb-12">
+                    A gente entende que um negócio de sucesso funciona bem por dentro e por fora. Enquanto muitas agências cuidam só da sua imagem externa, nós também organizamos os bastidores da sua operação.
+                </p>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="card flex flex-col items-center text-center">
+                        <i data-lucide="lightbulb" class="w-8 h-8 text-lilac mb-3"></i>
+                        <h3 class="font-semibold text-white mb-2">Foco em Resultados</h3>
+                        <p class="text-sm text-gray-300">Ajudamos você a vender mais e a gastar menos energia com a desorganização.</p>
+                    </div>
+                    <div class="card flex flex-col items-center text-center">
+                        <i data-lucide="palette" class="w-8 h-8 text-lilac mb-3"></i>
+                        <h3 class="font-semibold text-white mb-2">Design e Conteúdo</h3>
+                        <p class="text-sm text-gray-300">Criamos design e conteúdo que realmente comunicam sua essência criativa.</p>
+                    </div>
+                    <div class="card flex flex-col items-center text-center">
+                        <i data-lucide="cog" class="w-8 h-8 text-lilac mb-3"></i>
+                        <h3 class="font-semibold text-white mb-2">Operação Leve</h3>
+                        <p class="text-sm text-gray-300">Estruturamos sua operação para que a execução seja leve e escalável.</p>
+                    </div>
+                    <div class="card flex flex-col items-center text-center">
+                        <i data-lucide="user-check" class="w-8 h-8 text-lilac mb-3"></i>
+                        <h3 class="font-semibold text-white mb-2">Mais Autonomia</h3>
+                        <p class="text-sm text-gray-300">Organizamos o que precisa ser feito para você ter mais liberdade.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="servicos" class="py-16 lg:py-24 border-t border-site-border/60">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl sm:text-4xl font-bold text-white text-center mb-10">O que fazemos</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="card">
+                        <i data-lucide="pen-tool" class="w-6 h-6 text-lilac mb-3"></i>
+                        <h3 class="font-semibold text-white mb-2">Design Gráfico e Identidade Visual</h3>
+                        <p class="text-sm text-gray-300">Criamos a identidade da sua marca, do logo à paleta de cores.</p>
+                    </div>
+                    <div class="card">
+                        <i data-lucide="layout" class="w-6 h-6 text-lilac mb-3"></i>
+                        <h3 class="font-semibold text-white mb-2">Criação de Sites e Landing Pages</h3>
+                        <p class="text-sm text-gray-300">Páginas de alta performance para converter mais visitantes em clientes.</p>
+                    </div>
+                    <div class="card">
+                        <i data-lucide="instagram" class="w-6 h-6 text-lilac mb-3"></i>
+                        <h3 class="font-semibold text-white mb-2">Gestão de Redes Sociais</h3>
+                        <p class="text-sm text-gray-300">Cuidamos da sua presença online com conteúdo, calendário e relatórios de engajamento.</p>
+                    </div>
+                    <div class="card">
+                        <i data-lucide="megaphone" class="w-6 h-6 text-lilac mb-3"></i>
+                        <h3 class="font-semibold text-white mb-2">Anúncios Online (Google Ads / Meta Ads)</h3>
+                        <p class="text-sm text-gray-300">Divulgação do seu Site ou Loja Virtual no Google, apareça nas primeiras páginas através de pesquisas de palavras-chaves.</p>
+                    </div>
+                    <div class="card">
+                        <i data-lucide="workflow" class="w-6 h-6 text-lilac mb-3"></i>
+                        <h3 class="font-semibold text-white mb-2">Gestão de Processos Internos</h3>
+                        <p class="text-sm text-gray-300">Organização de fluxos de trabalho, automação e estruturação de processos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="trabalho" class="py-16 lg:py-24 border-t border-site-border/60">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl sm:text-4xl font-bold text-white text-center mb-10">Como Trabalhamos</h2>
+                <div class="grid md:grid-cols-4 gap-8 text-center">
+                    <div class="flex flex-col items-center">
+                        <div class="w-16 h-16 flex items-center justify-center rounded-full bg-lilac/10 border border-lilac/30 mb-4">
+                            <i data-lucide="stethoscope" class="w-8 h-8 text-lilac"></i>
+                        </div>
+                        <h4 class="font-semibold text-white mb-2">1. Diagnóstico</h4>
+                        <p class="text-sm text-gray-300">Reunião para entender seus objetivos e mapear gargalos.</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="w-16 h-16 flex items-center justify-center rounded-full bg-lilac/10 border border-lilac/30 mb-4">
+                            <i data-lucide="clipboard-list" class="w-8 h-8 text-lilac"></i>
+                        </div>
+                        <h4 class="font-semibold text-white mb-2">2. Planejamento</h4>
+                        <p class="text-sm text-gray-300">Definimos um plano com prioridades, prazos e estimativas.</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="w-16 h-16 flex items-center justify-center rounded-full bg-lilac/10 border border-lilac/30 mb-4">
+                            <i data-lucide="rocket" class="w-8 h-8 text-lilac"></i>
+                        </div>
+                        <h4 class="font-semibold text-white mb-2">3. Execução</h4>
+                        <p class="text-sm text-gray-300">Colocamos a mão na massa para transformar o plano em realidade.</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="w-16 h-16 flex items-center justify-center rounded-full bg-lilac/10 border border-lilac/30 mb-4">
+                            <i data-lucide="bar-chart-3" class="w-8 h-8 text-lilac"></i>
+                        </div>
+                        <h4 class="font-semibold text-white mb-2">4. Acompanhamento</h4>
+                        <p class="text-sm text-gray-300">Monitoramento contínuo, otimização e relatórios claros.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="blog" class="py-16 lg:py-24 border-t border-site-border/60">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Blog Agência Atthos</h2>
+                <p class="text-lg text-gray-300 max-w-2xl mx-auto mb-8">
+                    Aqui, a gente compartilha o que aprende e aplica no dia a dia. Nosso blog é um espaço para quem quer entender melhor o universo do marketing e gestão, de um jeito fácil e prático.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="https://notion.so/atthos-blog" target="_blank" rel="noopener" class="btn btn-primary">
+                        <i data-lucide="external-link" class="w-5 h-5 mr-2"></i> Explorar Conteúdo no Notion
+                    </a>
+                    <a href="#contato" class="btn btn-ghost">
+                        <i data-lucide="users" class="w-5 h-5 mr-2"></i> Comunidade
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre" class="py-16 lg:py-24 border-t border-site-border/60">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Sobre Nós</h2>
+                <p class="text-lg text-gray-300 max-w-2xl mx-auto mb-12">
+                    Especialistas em desenvolvimento de sites, landing pages e divulgação pelo Google Ads. Nossa missão é prestar serviços que ajudem nossos clientes a crescerem em seus negócios, sempre buscando ser referência no mercado com **Respeito, Honestidade, Sinceridade e Dignidade**.
+                </p>
+            </div>
+        </section>
+
+        <section id="contato" class="py-16 lg:py-24 border-t border-site-border/60">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Pronto para transformar seu negócio?</h2>
+                <p class="text-lg text-gray-300 mt-3">Clique no botão e vamos tirar seu projeto do papel. Simples, direto e sem burocracia.</p>
+                <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
+                    <a href="https://wa.me/5599999999999" target="_blank" rel="noopener" class="btn btn-primary text-base">
+                        <i data-lucide="message-circle" class="w-5 h-5 mr-2"></i> Iniciar conversa no WhatsApp
+                    </a>
+                    <a href="mailto:contato@atthostech.com" class="btn btn-ghost text-base">
+                        <i data-lucide="mail" class="w-5 h-5 mr-2"></i> Enviar briefing por e-mail
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="border-t border-site-border/60 bg-site-dark/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+            <div class="grid md:grid-cols-4 gap-8 text-sm">
+                <div>
+                    <div class="text-white font-extrabold text-lg">Agência <span class="text-lilac">Atthos</span></div>
+                    <p class="mt-3 text-gray-400">Descomplicando seu negócio com estratégia, design e processos.</p>
+                </div>
+                <div>
+                    <div class="text-white font-semibold mb-3">Mapa</div>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#home" class="hover:text-white">Home</a></li>
+                        <li><a href="#servicos" class="hover:text-white">Serviços</a></li>
+                        <li><a href="#trabalho" class="hover:text-white">Como Trabalhamos</a></li>
+                        <li><a href="#blog" class="hover:text-white">Blog</a></li>
+                        <li><a href="#sobre" class="hover:text-white">Quem Somos</a></li>
+                        <li><a href="#contato" class="hover:text-white">Contato</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="text-white font-semibold mb-3">Canais</div>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="https://www.instagram.com/agenciaatthos" target="_blank" class="hover:text-white">Instagram</a></li>
+                        <li><a href="https://www.linkedin.com/company/agenciaatthos" target="_blank" class="hover:text-white">LinkedIn</a></li>
+                        <li><a href="#" target="_blank" class="hover:text-white">TikTok</a></li>
+                        <li><a href="#" target="_blank" class="hover:text-white">Facebook</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="text-white font-semibold mb-3">Newsletter</div>
+                    <p class="text-sm text-gray-300">Em breve...</p>
+                </div>
+            </div>
+            <div class="pt-8 mt-8 border-t border-site-border/60 text-xs text-gray-500">© 2025 Agência Atthos. Todos os direitos reservados.</div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        window.addEventListener('load', () => lucide.createIcons());
+    </script>
+</body>
+</html>
