@@ -1,21 +1,21 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const btn = document.getElementById('menuBtn');
-    const nav = document.getElementById('mobileNav');
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileNav = document.getElementById('mobileNav');
 
-    if (btn && nav) {
-        btn.addEventListener('click', () => {
-            const isOpen = !nav.classList.contains('hidden');
-            nav.classList.toggle('hidden');
+    if (menuBtn && mobileNav) {
+        menuBtn.addEventListener('click', () => {
+            const isOpen = !mobileNav.classList.contains('hidden');
+            mobileNav.classList.toggle('hidden');
             const icon = isOpen ? 'menu' : 'x';
-            btn.innerHTML = `<i data-lucide="${icon}" class="w-6 h-6"></i>`;
+            menuBtn.innerHTML = `<i data-lucide="${icon}" class="w-6 h-6"></i>`;
             lucide.createIcons();
         });
 
-        const navLinks = nav.querySelectorAll('a');
+        const navLinks = mobileNav.querySelectorAll('a');
         navLinks.forEach(link => {
             link.addEventListener('click', () => {
-                nav.classList.add('hidden');
-                btn.innerHTML = `<i data-lucide="menu" class="w-6 h-6"></i>`;
+                mobileNav.classList.add('hidden');
+                menuBtn.innerHTML = `<i data-lucide="menu" class="w-6 h-6"></i>`;
                 lucide.createIcons();
             });
         });
