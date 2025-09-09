@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Serviços | Agência Atthos</title>
-    <meta name="description" content="Conheça os serviços da Agência Atthos: Design Gráfico, Criação de Sites, Gestão de Redes Sociais, Anúncios Online e Gestão de Processos Internos.">
+    <meta name="description" content="Conheça os serviços da Agência Atthos para digitalizar seu negócio: Gestão de Processos, Sites e Landing Pages, Social Media e Tráfego Pago.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
@@ -18,167 +18,110 @@
             <a href="index.html" class="flex items-center gap-2 text-white font-extrabold text-xl">
                 <span>Agência</span><span class="text-lilac">Atthos</span>
             </a>
-            <nav class="hidden md:flex items-center gap-6 text-sm text-gray-300">
-                <a href="index.html" class="hover:text-white transition-colors duration-300">Home</a>
-                <a href="servicos.html" class="hover:text-white transition-colors duration-300">Serviços</a>
-                <a href="comotrabalhamos.html" class="hover:text-white transition-colors duration-300">Como Trabalhamos</a>
-                <a href="centraldeconteudo.html" class="hover:text-white transition-colors duration-300">Central de Conteúdo</a>
-                <a href="index.html#sobre" class="hover:text-white transition-colors duration-300">Quem Somos</a>
-                <a href="contato.html" class="hover:text-white transition-colors duration-300">Contato</a>
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="index.html" class="text-gray-400 hover:text-lilac transition-colors">Início</a>
+                <a href="servicos.html" class="text-lilac transition-colors">Serviços</a>
+                <a href="comotrabalhamos.html" class="text-gray-400 hover:text-lilac transition-colors">Como Trabalhamos</a>
+                <a href="centraldeconteudo.html" class="text-gray-400 hover:text-lilac transition-colors">Central de Conteúdo</a>
+                <a href="contato.html" class="px-4 py-2 rounded-full font-semibold bg-lilac text-gray-950 hover:scale-105 transition-all duration-300">Contato</a>
             </nav>
-            <a href="https://wa.me/11965391331" target="_blank" rel="noopener" class="hidden md:inline-flex items-center px-4 py-2 rounded-full font-semibold bg-lilac text-gray-900 transition-all duration-300 hover:scale-105">
-                <i data-lucide="message-square" class="w-4 h-4 mr-2"></i> Fale com a gente
-            </a>
-            <button id="menuBtn" class="md:hidden text-white"><i data-lucide="menu" class="w-6 h-6"></i></button>
+            <button id="menuBtn" class="md:hidden text-gray-400 hover:text-lilac transition-colors">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
         </div>
-        <div id="mobileNav" class="md:hidden hidden border-t border-gray-800 bg-gray-950">
-            <nav class="px-4 py-4 flex flex-col gap-4 text-sm">
-                <a href="index.html" class="hover:text-white transition-colors duration-300">Home</a>
-                <a href="servicos.html" class="hover:text-white transition-colors duration-300">Serviços</a>
-                <a href="comotrabalhamos.html" class="hover:text-white transition-colors duration-300">Como Trabalhamos</a>
-                <a href="centraldeconteudo.html" class="hover:text-white transition-colors duration-300">Central de Conteúdo</a>
-                <a href="index.html#sobre" class="hover:text-white transition-colors duration-300">Quem Somos</a>
-                <a href="contato.html" class="hover:text-white transition-colors duration-300">Contato</a>
-                <a href="https://wa.me/11965391331" target="_blank" rel="noopener" class="mt-2 inline-flex items-center justify-center px-4 py-2 rounded-full font-semibold bg-lilac text-gray-900 hover:opacity-80 transition-opacity duration-300">
-                    <i data-lucide="message-square" class="w-4 h-4 mr-2"></i> Fale com a gente
-                </a>
-            </nav>
+        <div id="mobileNav" class="hidden md:hidden bg-gray-950 px-4 pt-4 pb-8 space-y-4 text-center border-t border-gray-800">
+            <a href="index.html" class="block py-2 text-gray-400 hover:text-lilac transition-colors">Início</a>
+            <a href="servicos.html" class="block py-2 text-lilac transition-colors">Serviços</a>
+            <a href="comotrabalhamos.html" class="block py-2 text-gray-400 hover:text-lilac transition-colors">Como Trabalhamos</a>
+            <a href="centraldeconteudo.html" class="block py-2 text-gray-400 hover:text-lilac transition-colors">Central de Conteúdo</a>
+            <a href="contato.html" class="block py-2 px-4 rounded-full font-semibold bg-lilac text-gray-950 hover:scale-105 transition-all duration-300">Contato</a>
         </div>
     </header>
 
-    <main class="pt-24 min-h-screen">
-        <section class="py-16 lg:py-24 border-t border-gray-800">
+    <main class="pt-24 pb-16 lg:pb-24">
+        <section id="servicos" class="py-16 lg:py-24">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-white">O que fazemos</h2>
-                <p class="text-lg text-gray-400 mt-3 max-w-2xl mx-auto">
-                    Ajudamos seu negócio a crescer e se organizar com estratégias digitais simples e eficientes.
+                <span class="text-xs sm:text-sm font-medium uppercase text-lilac block mb-2">O que fazemos</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white leading-tight">
+                    Nossos serviços
+                </h2>
+                <p class="text-lg text-gray-400 mt-4 max-w-2xl mx-auto">
+                    Ajudamos você a ganhar mais autonomia, organizar o que precisa ser feito e gerar resultados de verdade, sem complicação.
                 </p>
-                <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="p-6 rounded-2xl border border-gray-800 bg-gray-900 shadow-md transition-transform duration-300 hover:scale-[1.02]">
-                        <i data-lucide="pen-tool" class="w-10 h-10 text-lilac mx-auto mb-4"></i>
-                        <h3 class="font-semibold text-white text-xl mb-2">Design Gráfico e Identidade Visual</h3>
-                        <p class="text-sm text-gray-400">Criamos a identidade da sua marca, do logo à paleta de cores.</p>
-                    </div>
-                    <div class="p-6 rounded-2xl border border-gray-800 bg-gray-900 shadow-md transition-transform duration-300 hover:scale-[1.02]">
-                        <i data-lucide="laptop-code" class="w-10 h-10 text-lilac mx-auto mb-4"></i>
-                        <h3 class="font-semibold text-white text-xl mb-2">Criação de Sites e Landing Pages</h3>
-                        <p class="text-sm text-gray-400">Páginas de alta performance para converter mais visitantes em clientes.</p>
-                    </div>
-                    <div class="p-6 rounded-2xl border border-gray-800 bg-gray-900 shadow-md transition-transform duration-300 hover:scale-[1.02]">
-                        <i data-lucide="message-square" class="w-10 h-10 text-lilac mx-auto mb-4"></i>
-                        <h3 class="font-semibold text-white text-xl mb-2">Gestão de Redes Sociais</h3>
-                        <p class="text-sm text-gray-400">Cuidamos da sua presença online.</p>
-                    </div>
-                    <div class="p-6 rounded-2xl border border-gray-800 bg-gray-900 shadow-md transition-transform duration-300 hover:scale-[1.02]">
-                        <i data-lucide="megaphone" class="w-10 h-10 text-lilac mx-auto mb-4"></i>
-                        <h3 class="font-semibold text-white text-xl mb-2">Anúncios Online (Google Ads / Meta Ads)</h3>
-                        <p class="text-sm text-gray-400">Gerenciamos suas campanhas de tráfego pago para atrair clientes qualificados.</p>
-                    </div>
-                    <div class="p-6 rounded-2xl border border-gray-800 bg-gray-900 shadow-md transition-transform duration-300 hover:scale-[1.02]">
-                        <i data-lucide="briefcase" class="w-10 h-10 text-lilac mx-auto mb-4"></i>
-                        <h3 class="font-semibold text-white text-xl mb-2">Gestão de Processos Internos</h3>
-                        <p class="text-sm text-gray-400">Organização de fluxos de trabalho e automação para a execução ser leve e escalável.</p>
-                    </div>
-                    <div class="p-6 rounded-2xl border border-gray-800 bg-gray-900 shadow-md transition-transform duration-300 hover:scale-[1.02]">
-                        <i data-lucide="wrench" class="w-10 h-10 text-lilac mx-auto mb-4"></i>
-                        <h3 class="font-semibold text-white text-xl mb-2">Suporte Digital</h3>
-                        <p class="text-sm text-gray-400">Suporte 100% online para resolver burocracias e processos digitais.</p>
-                    </div>
+            </div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
+                <div class="bg-gray-900 rounded-lg p-6 text-center">
+                    <i data-lucide="layout-grid" class="w-12 h-12 text-lilac mx-auto mb-4"></i>
+                    <h3 class="text-xl font-bold text-white mb-2">Gestão de Processos</h3>
+                    <p class="text-sm text-gray-400">
+                        Organizamos a casa pra você, de forma simples e descomplicada.
+                    </p>
+                </div>
+                <div class="bg-gray-900 rounded-lg p-6 text-center">
+                    <i data-lucide="monitor" class="w-12 h-12 text-lilac mx-auto mb-4"></i>
+                    <h3 class="text-xl font-bold text-white mb-2">Sites & Landing Pages</h3>
+                    <p class="text-sm text-gray-400">
+                        Seu negócio com presença digital de verdade, atraindo clientes 24/7.
+                    </p>
+                </div>
+                <div class="bg-gray-900 rounded-lg p-6 text-center">
+                    <i data-lucide="megaphone" class="w-12 h-12 text-lilac mx-auto mb-4"></i>
+                    <h3 class="text-xl font-bold text-white mb-2">Social Media</h3>
+                    <p class="text-sm text-gray-400">
+                        Geramos conexão com seu público através de conteúdo de valor.
+                    </p>
+                </div>
+                <div class="bg-gray-900 rounded-lg p-6 text-center">
+                    <i data-lucide="bar-chart-2" class="w-12 h-12 text-lilac mx-auto mb-4"></i>
+                    <h3 class="text-xl font-bold text-white mb-2">Tráfego Pago</h3>
+                    <p class="text-sm text-gray-400">
+                        Levamos sua mensagem para quem realmente precisa ver seu negócio.
+                    </p>
                 </div>
             </div>
-        </section>
-
-        <section class="py-16 lg:py-24 border-t border-gray-800 text-center">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Por que escolher a Atthos?</h2>
-                <p class="text-lg text-gray-400 mt-3 max-w-2xl mx-auto">
-                    A gente entende que um negócio de sucesso funciona bem por dentro e por fora.
-                </p>
-                <div class="mt-8 flex flex-col sm:flex-row gap-8 justify-center">
-                    <div class="flex flex-col items-center">
-                        <i data-lucide="award" class="w-12 h-12 text-lilac mb-2"></i>
-                        <h4 class="font-semibold text-white mb-1">Venda Mais, Gaste Menos Energia</h4>
-                        <p class="text-sm text-gray-400 max-w-xs">Ajudamos você a vender mais e a gastar menos energia com a desorganização.</p>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <i data-lucide="check-circle" class="w-12 h-12 text-lilac mb-2"></i>
-                        <h4 class="font-semibold text-white mb-1">Design e Conteúdo que Comunicam</h4>
-                        <p class="text-sm text-gray-400 max-w-xs">Criamos design e conteúdo que realmente se conectam ao seu público.</p>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <i data-lucide="trending-up" class="w-12 h-12 text-lilac mb-2"></i>
-                        <h4 class="font-semibold text-white mb-1">Operação Leve e Escalável</h4>
-                        <p class="text-sm text-gray-400 max-w-xs">Estruturamos sua operação para que a execução seja leve e escalável.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="py-16 lg:py-24 border-t border-gray-800 text-center">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Pronto para transformar seu negócio?</h2>
-                <p class="text-lg text-gray-400 mt-3 max-w-2xl mx-auto">
-                    Fale com a gente e descubra como podemos te ajudar a alcançar seus objetivos.
-                </p>
-                <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
-                    <a href="contato.html" class="inline-flex items-center justify-center px-6 py-3 rounded-full font-semibold bg-lilac text-gray-900 transition-all duration-300 hover:scale-105">
-                        <i data-lucide="message-square" class="w-4 h-4 mr-2"></i> Fale com a gente
-                    </a>
-                    <a href="https://wa.me/11965391331" target="_blank" rel="noopener" class="inline-flex items-center justify-center px-5 py-2 rounded-full font-semibold border border-gray-700 text-gray-200 hover:bg-gray-800 transition-colors duration-300">
-                        <i data-lucide="whatsapp" class="w-4 h-4 mr-2"></i> Tire suas dúvidas no WhatsApp
-                    </a>
-                </div>
+            <div class="text-center mt-12">
+                <a href="contato.html" class="px-6 py-3 rounded-full font-semibold bg-lilac text-gray-900 hover:scale-105 transition-all duration-300">
+                    Começar
+                </a>
             </div>
         </section>
     </main>
 
-    <footer class="py-12 lg:py-20 border-t border-gray-800 bg-gray-950">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div>
-                <a href="index.html" class="flex items-center gap-2 text-white font-extrabold text-xl">
+    <footer class="bg-gray-950 py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center md:items-start gap-8 md:gap-4">
+            <div class="text-center md:text-left">
+                <a href="index.html" class="flex items-center gap-2 text-white font-extrabold text-2xl">
                     <span>Agência</span><span class="text-lilac">Atthos</span>
                 </a>
-                <p class="mt-4 text-sm text-gray-400">
-                    Descomplicando seu negócio com estratégia, design e processos.
-                </p>
+                <p class="text-sm text-gray-500 mt-2">Seu negócio digitalizado.</p>
             </div>
-            <div>
-                <h4 class="text-white font-semibold mb-4">Mapa</h4>
-                <nav class="flex flex-col gap-2 text-sm text-gray-400">
-                    <a href="index.html" class="hover:text-lilac transition-colors">Home</a>
-                    <a href="servicos.html" class="hover:text-lilac transition-colors">Serviços</a>
-                    <a href="comotrabalhamos.html" class="hover:text-lilac transition-colors">Como Trabalhamos</a>
-                    <a href="centraldeconteudo.html" class="hover:text-lilac transition-colors">Central de Conteúdo</a>
-                    <a href="index.html#sobre" class="hover:text-lilac transition-colors">Quem Somos</a>
-                    <a href="contato.html" class="hover:text-lilac transition-colors">Contato</a>
-                </nav>
-            </div>
-            <div>
-                <h4 class="text-white font-semibold mb-4">Serviços</h4>
-                <nav class="flex flex-col gap-2 text-sm text-gray-400">
-                    <a href="servicos.html#design" class="hover:text-lilac transition-colors">Design Gráfico</a>
-                    <a href="servicos.html#sites" class="hover:text-lilac transition-colors">Criação de Sites</a>
-                    <a href="servicos.html#social" class="hover:text-lilac transition-colors">Gestão de Redes Sociais</a>
-                    <a href="servicos.html#anuncios" class="hover:text-lilac transition-colors">Anúncios Online</a>
-                    <a href="servicos.html#processos" class="hover:text-lilac transition-colors">Gestão de Processos</a>
-                    <a href="servicos.html#suporte" class="hover:text-lilac transition-colors">Suporte Digital</a>
-                </nav>
-            </div>
-            <div>
-                <h4 class="text-white font-semibold mb-4">Redes Sociais</h4>
-                <div class="flex flex-col gap-2 text-sm">
-                    <a href="https://www.instagram.com/agencia_atthos/" target="_blank" rel="noopener" class="flex items-center gap-2 text-gray-400 hover:text-lilac transition-colors">
-                        <i data-lucide="instagram" class="w-4 h-4"></i> Instagram
-                    </a>
-                    <span class="flex items-center gap-2 text-gray-600 cursor-not-allowed">
-                        <i data-lucide="linkedin" class="w-4 h-4"></i> LinkedIn (Em breve)
-                    </span>
-                    <span class="flex items-center gap-2 text-gray-600 cursor-not-allowed">
-                        <i data-lucide="tiktok" class="w-4 h-4"></i> TikTok (Em Breve)
-                    </span>
-                    <a href="https://www.facebook.com/sua_agencia/" target="_blank" rel="noopener" class="flex items-center gap-2 text-gray-400 hover:text-lilac transition-colors">
-                        <i data-lucide="facebook" class="w-4 h-4"></i> Facebook
-                    </a>
+            <div class="flex flex-col md:flex-row gap-8 md:gap-16 text-center md:text-left">
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Links Úteis</h4>
+                    <div class="flex flex-col gap-2 text-sm">
+                        <a href="index.html" class="text-gray-400 hover:text-lilac transition-colors">Início</a>
+                        <a href="servicos.html" class="text-lilac transition-colors">Serviços</a>
+                        <a href="comotrabalhamos.html" class="text-gray-400 hover:text-lilac transition-colors">Como Trabalhamos</a>
+                        <a href="centraldeconteudo.html" class="text-gray-400 hover:text-lilac transition-colors">Central de Conteúdo</a>
+                        <a href="contato.html" class="text-gray-400 hover:text-lilac transition-colors">Contato</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Redes Sociais</h4>
+                    <div class="flex flex-col gap-2 text-sm">
+                        <a href="https://www.instagram.com/agencia_atthos/" target="_blank" rel="noopener" class="flex items-center gap-2 text-gray-400 hover:text-lilac transition-colors">
+                            <i data-lucide="instagram" class="w-4 h-4"></i> Instagram
+                        </a>
+                        <span class="flex items-center gap-2 text-gray-600 cursor-not-allowed">
+                            <i data-lucide="linkedin" class="w-4 h-4"></i> LinkedIn (Em breve)
+                        </span>
+                        <span class="flex items-center gap-2 text-gray-600 cursor-not-allowed">
+                            <i data-lucide="tiktok" class="w-4 h-4"></i> TikTok (Em Breve)
+                        </span>
+                        <a href="https://www.facebook.com/sua_agencia/" target="_blank" rel="noopener" class="flex items-center gap-2 text-gray-400 hover:text-lilac transition-colors">
+                            <i data-lucide="facebook" class="w-4 h-4"></i> Facebook
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -189,7 +132,7 @@
 
     <script src="script.js"></script>
     <script>
-        window.addEventListener('load', () => lucide.createIcons());
+        lucide.createIcons();
     </script>
 </body>
 </html>
