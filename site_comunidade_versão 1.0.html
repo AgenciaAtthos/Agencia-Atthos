@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comunidade Atthos | Conectando você a oportunidades e estudos</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        
+        :root {
+            --cor-fundo: #0E0E10;
+            --cor-texto-claro: #F5F5F7;
+            --cor-texto-secundario: #A0A0A0;
+            --cor-destaque: #805ad5;
+            --cor-destaque-claro: #9f7aea;
+            --cor-sombra: rgba(0, 0, 0, 0.5);
+            --cor-card: #18181B;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--cor-fundo);
+            color: var(--cor-texto-claro);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .header {
+            background: rgba(14, 14, 16, 0.8);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--cor-card);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--cor-texto-claro);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo-icon {
+            width: 30px;
+            height: 30px;
+            background-color: var(--cor-destaque);
+            border-radius: 50%;
+            margin-right: 0.5rem;
+        }
+        
+        .nav-menu {
+            display: flex;
+            gap: 1.5rem;
+        }
+        
+        .nav-menu a {
+            color: var(--cor-texto-secundario);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-menu a:hover {
+            color: var(--cor-texto-claro);
+        }
+
+        .hero {
+            text-align: center;
+            padding: 6rem 0;
+            background: var(--cor-fundo);
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            background-image: linear-gradient(to right, var(--cor-destaque), var(--cor-destaque-claro));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--cor-texto-secundario);
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 0.75rem 2rem;
+            background-image: linear-gradient(to right, var(--cor-destaque), var(--cor-destaque-claro));
+            color: var(--cor-texto-claro);
+            text-decoration: none;
+            border-radius: 9999px;
+            font-weight: 700;
+            transition: transform 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+        }
+
+        .section {
+            padding: 4rem 0;
+            background-color: var(--cor-card);
+            margin-bottom: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px var(--cor-sombra);
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            color: var(--cor-texto-claro);
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background-color: var(--cor-fundo);
+            padding: 2rem;
+            border-radius: 0.75rem;
+            border: 1px solid var(--cor-card);
+            box-shadow: 0 2px 4px var(--cor-sombra);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px var(--cor-sombra);
+        }
+
+        .card-icon {
+            color: var(--cor-destaque);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .card h4 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--cor-texto-claro);
+            margin-bottom: 0.5rem;
+        }
+
+        .card p {
+            color: var(--cor-texto-secundario);
+            font-size: 1rem;
+        }
+
+        .faq-item {
+            background-color: var(--cor-fundo);
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            border: 1px solid var(--cor-card);
+            margin-bottom: 1rem;
+            transition: background-color 0.3s ease;
+        }
+        
+        .faq-item summary {
+            font-weight: 600;
+            cursor: pointer;
+            color: var(--cor-texto-claro);
+        }
+        
+        .faq-item p {
+            margin-top: 1rem;
+            padding-left: 1rem;
+            border-left: 2px solid var(--cor-destaque);
+            color: var(--cor-texto-secundario);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 2rem 0;
+            border-top: 1px solid var(--cor-card);
+            color: var(--cor-texto-secundario);
+        }
+        
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--cor-texto-claro);
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-logo-icon {
+            width: 25px;
+            height: 25px;
+            background-color: var(--cor-destaque);
+            border-radius: 50%;
+            margin-right: 0.5rem;
+        }
+        
+        .footer p {
+            font-size: 0.8rem;
+            margin: 0;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header-content">
+            <a href="#" class="logo">
+                <div class="logo-icon"></div>
+                Comunidade Atthos
+            </a>
+            <nav class="nav-menu">
+                <a href="#proposito">Propósito</a>
+                <a href="#beneficios">Benefícios</a>
+                <a href="#regras">Regras</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Sua plataforma para conexões e aprendizado.</h1>
+                <p>
+                    Conecte-se com outros empreendedores, tenha suporte em tempo real e explore novas oportunidades de negócio e estudo.
+                </p>
+                <a href="https://wa.me/11965391331" class="cta-button">Entre agora na Comunidade</a>
+            </div>
+        </section>
+
+        <section id="proposito" class="section">
+            <div class="container">
+                <h2 class="section-title">Nosso Propósito</h2>
+                <div class="grid-3">
+                    <div class="card">
+                        <div class="card-icon">🧠</div>
+                        <h4>Aprenda e Cresça</h4>
+                        <p>
+                            Acesse conteúdos, tire dúvidas e participe de discussões para aprimorar suas habilidades e conhecimentos.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">🤝</div>
+                        <h4>Conecte-se</h4>
+                        <p>
+                            Faça networking com pessoas que pensam como você. Encontre parceiros, colaboradores e mentores.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">🎯</div>
+                        <h4>Aplique na Prática</h4>
+                        <p>
+                            Utilize o conhecimento da comunidade para resolver desafios reais do seu dia a dia e impulsionar seus projetos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="beneficios" class="section">
+            <div class="container">
+                <h2 class="section-title">Benefícios Exclusivos</h2>
+                <div class="grid-3">
+                    <div class="card">
+                        <div class="card-icon">📚</div>
+                        <h4>Biblioteca de Materiais</h4>
+                        <p>
+                            Acesso a conteúdos exclusivos como e-books, templates e guias práticos.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">📣</div>
+                        <h4>Suporte Direto</h4>
+                        <p>
+                            Tire dúvidas em tempo real com especialistas e outros membros da comunidade.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">🗓️</div>
+                        <h4>Eventos Online</h4>
+                        <p>
+                            Participe de workshops, webinars e sessões de Q&A exclusivas para membros.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="regras" class="section">
+            <div class="container">
+                <h2 class="section-title">Regras e Convivência</h2>
+                <details class="faq-item">
+                    <summary>Nossas regras são simples para garantir o melhor ambiente.</summary>
+                    <div style="margin-top: 1rem;">
+                        <div>
+                            <h4>Regras de Convivência</h4>
+                            <ol style="color: var(--cor-texto-secundario);">
+                                <li><strong>Respeito é obrigatório:</strong> Sem ofensas ou preconceitos.</li>
+                                <li><strong>Conteúdo proibido:</strong> Pornografia, violência, discurso de ódio.</li>
+                                <li><strong>Privacidade em primeiro lugar:</strong> Não compartilhe dados pessoais de ninguém.</li>
+                                <li><strong>Nada de spam:</strong> Grupos são para troca real, não autopromoção.</li>
+                                <li><strong>Respeite admins e moderadores:</strong> Suas decisões visam o bem coletivo.</li>
+                                <li><strong>Denuncie irregularidades:</strong> Ajude a manter a ordem.</li>
+                                <li><strong>Comunidade = lugar de crescer:</strong> Colabore e aprenda.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-logo">
+                <div class="footer-logo-icon"></div>
+                Comunidade Atthos
+            </div>
+            <p>Suporte Descomplicado, Oportunidades, Conectado Com Pessoas.</p>
+            <p>Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
