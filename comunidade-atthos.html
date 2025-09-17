@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comunidade | Agência Atthos</title>
+    <meta name="description" content="A Comunidade Atthos é um espaço para conexão, aprendizado e crescimento com profissionais do mundo digital.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gray: {
+                            950: '#030712'
+                        },
+                        lilac: '#C084FC',
+                    },
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-gray-950 text-gray-300 font-inter">
+
+    <header class="fixed top-0 w-full z-50 border-b border-gray-800 bg-gray-950/80 backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2 text-white font-extrabold text-xl">
+                <span>Agência</span><span class="text-lilac">Atthos</span>
+            </a>
+            <nav id="menu" class="hidden md:flex space-x-6">
+                <a href="index.html" class="hover:text-lilac transition-colors">Home</a>
+                <a href="servicos.html" class="hover:text-lilac transition-colors">Serviços</a>
+                <a href="quemsomos.html" class="hover:text-lilac transition-colors">Quem Somos</a>
+                <a href="blog-atthos.html" class="hover:text-lilac transition-colors">Blog</a>
+                <a href="comunidade-atthos.html" class="text-lilac font-semibold transition-colors">Comunidade</a>
+                <a href="contato.html" class="hover:text-lilac transition-colors">Contato</a>
+            </nav>
+            <button id="menu-btn" class="md:hidden text-white focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+            </button>
+        </div>
+    </header>
+
+    <div id="mobile-menu" class="md:hidden bg-gray-800 text-white p-4 hidden mt-16">
+        <a href="index.html" class="block py-2 hover:bg-gray-700 rounded-md">Home</a>
+        <a href="servicos.html" class="block py-2 hover:bg-gray-700 rounded-md">Serviços</a>
+        <a href="quemsomos.html" class="block py-2 hover:bg-gray-700 rounded-md">Quem Somos</a>
+        <a href="blog-atthos.html" class="block py-2 hover:bg-gray-700 rounded-md">Blog</a>
+        <a href="comunidade-atthos.html" class="block py-2 bg-gray-700 rounded-md">Comunidade</a>
+        <a href="contato.html" class="block py-2 hover:bg-gray-700 rounded-md">Contato</a>
+    </div>
+
+    <main class="pt-16">
+        <section id="comunidade-Atthos" class="py-16 md:py-24 px-4">
+            <div class="container mx-auto max-w-7xl">
+                <h1 class="text-4xl sm:text-5xl font-extrabold text-white text-center leading-tight mb-12">A Comunidade Atthos: Conexões e Aprendizado</h1>
+        
+                <p class="text-lg text-gray-400 mt-4 max-w-2xl mx-auto text-center">No nosso blog temos um espaço especial para você conectar, aprender e crescer.</p>
+        
+                <div class="flex flex-wrap justify-center text-center gap-8 mt-12 mb-16">
+                    <div class="feature-item p-6 bg-gray-800 rounded-lg shadow-xl w-full sm:w-1/3 md:w-1/4 lg:w-1/5">
+                        <div class="mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users mx-auto text-lilac"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-lilac mb-2">Conexões Reais</h3>
+                        <p class="text-gray-400">Troque experiências com outros profissionais e expanda seu networking.</p>
+                    </div>
+                    <div class="feature-item p-6 bg-gray-800 rounded-lg shadow-xl w-full sm:w-1/3 md:w-1/4 lg:w-1/5">
+                        <div class="mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-open mx-auto text-lilac"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-lilac mb-2">Aprendizado Contínuo</h3>
+                        <p class="text-gray-400">Acesse materiais, guias e artigos que vão turbinar seu conhecimento no digital.</p>
+                    </div>
+                    <div class="feature-item p-6 bg-gray-800 rounded-lg shadow-xl w-full sm:w-1/3 md:w-1/4 lg:w-1/5">
+                        <div class="mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-circle-more mx-auto text-lilac"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/><path d="M8 12h.01"/><path d="M12 12h.01"/><path d="M16 12h.01"/></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-lilac mb-2">Comunidade Exclusiva</h3>
+                        <p class="text-gray-400">Faça parte de um grupo seleto para aprendizado e troca de experiências.</p>
+                    </div>
+                </div>
+        
+                <div class="community-details p-8 bg-gray-800 rounded-lg shadow-xl mb-12">
+                    <h3 class="text-2xl font-bold text-white mb-4">O que você encontra na Comunidade Atthos?</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-400">
+                        <li><strong>Conteúdo Prático:</strong> Dicas e materiais direto no seu WhatsApp.</li>
+                        <li><strong>Oportunidades:</strong> Acesso a vagas de emprego reais e confiáveis.</li>
+                        <li><strong>Curadoria de Aprendizagem:</strong> Cursos gratuitos de qualidade (EAD e presencial).</li>
+                        <li><strong>Suporte a Ferramentas:</strong> Ajuda com currículo, LinkedIn e preparação para entrevistas.</li>
+                    </ul>
+                </div>
+        
+                <div class="how-to-participate text-center mb-12">
+                    <h3 class="text-2xl font-bold text-white mb-4">Acesse a Comunidade no WhatsApp</h3>
+                    <p class="text-lg text-gray-400 mb-6">É simples! Acompanhe no seu ritmo direto no seu WhatsApp.</p>
+                    
+                    <div class="flex flex-col sm:flex-row justify-center gap-4">
+                        <a href="https://whatsapp.com/channel/0029VaiI4Z42UPBLfB0wkQ2S" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-500 hover:bg-blue-600 transition-colors" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-square mr-2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                            Acessar o Canal (Ofertas e Conteúdo)
+                        </a>
+                        <a href="https://chat.whatsapp.com/IvqcP74tFj3HhJXXkxzzqX" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-green-500 hover:bg-green-600 transition-colors" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users mr-2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                            Entrar no Grupo (Vagas e Networking)
+                        </a>
+                    </div>
+                </div>
+        
+                <div class="rules p-8 bg-gray-800 rounded-lg shadow-xl">
+                    <h3 class="text-2xl font-bold text-white mb-4">Regras e Convivência</h3>
+                    <p class="text-gray-400 mb-4">Para garantir um ambiente produtivo e respeitoso:</p>
+                    <ul class="list-none space-y-2 text-gray-400">
+                        <li>🤝 Respeito é obrigatório: Sem ofensas ou preconceitos.</li>
+                        <li>🚫 Conteúdo proibido: Pornografia, violência, discurso de ódio.</li>
+                        <li>🔒 Privacidade: Não compartilhe dados pessoais de terceiros.</li>
+                        <li>⛔ Sem spam: Grupos são para troca real, não autopromoção.</li>
+                        <li>⭐ Respeite admins e moderadores.</li>
+                        <li>🚨 Denuncie irregularidades.</li>
+                        <li>💡 Colabore e aprenda.</li>
+                    </ul>
+                    <p class="text-sm italic text-gray-500 mt-4">Dúvidas? Fale com os ADMs. Mantenha o foco em carreira e oportunidades.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-950 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap justify-between items-start gap-8">
+            <div class="w-full md:w-auto text-center md:text-left mb-6 md:mb-0">
+                <h4 class="text-2xl font-bold text-white mb-2">Agência Atthos</h4>
+                <p class="text-sm text-gray-400">Suporte digital, simplificado.</p>
+            </div>
+            <div class="flex flex-col items-center md:items-start text-center md:text-left mb-6 md:mb-0">
+                <h4 class="text-xl font-semibold text-white mb-4">Navegação</h4>
+                <ul class="space-y-2 text-sm text-gray-400">
+                    <li><a href="index.html" class="hover:text-lilac transition-colors">Home</a></li>
+                    <li><a href="servicos.html" class="hover:text-lilac transition-colors">Serviços</a></li>
+                    <li><a href="quemsomos.html" class="hover:text-lilac transition-colors">Quem Somos</a></li>
+                    <li><a href="blog-atthos.html" class="hover:text-lilac transition-colors">Blog</a></li>
+                    <li><a href="comunidade-atthos.html" class="hover:text-lilac transition-colors">Comunidade</a></li>
+                    <li><a href="contato.html" class="hover:text-lilac transition-colors">Contato</a></li>
+                </ul>
+            </div>
+            <div class="flex flex-col items-center md:items-start text-center md:text-left">
+                <h4 class="text-xl font-semibold text-white mb-4">Siga-nos</h4>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-lilac transition-colors" aria-label="Facebook">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-lilac transition-colors" aria-label="Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.5" y1="6.5" y2="6.5"/></svg>
+                    </a>
+                    <a href="https://wa.me/SEU-NUMERO-WHATSAPP" class="text-gray-400 hover:text-lilac transition-colors" target="_blank" aria-label="WhatsApp">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-circle-code"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/><path d="M10 13a5 5 0 0 0 7.54 2.245 5 5 0 1 0-7.54-2.245z"/><path d="M11 5a5 5 0 0 1 7.54 2.245 5 5 0 1 0-7.54-2.245z"/><path d="M8 17.54a5 5 0 0 0 2.245 7.54 5 5 0 1 0-7.54-2.245z"/><path d="M13 13a5 5 0 0 0-2.245-7.54 5 5 0 1 0 7.54 2.245z"/><path d="M8 12.5a5 5 0 0 1 5-5h1.54"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mt-10 pt-8 border-t border-gray-800">
+            <p class="text-sm text-gray-500">&copy; <span id="current-year">2024</span> Agência Atthos. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

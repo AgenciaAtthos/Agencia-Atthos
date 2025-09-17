@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog | Agência Atthos</title>
-    <meta name="description" content="Aprenda como fazer licenciamento, transferência, recorrer de multas e outros serviços do Detran online com nossos guias passo a passo, de forma simples e segura.">
-    
+    <title>Blog | Atos Assessoria</title>
+    <meta name="description" content="Conteúdos relevantes sobre licenciamento, multas, transferência, isenção PCD, e outros serviços do Detran para o Blog Atos Assessoria.">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        gray: {
-                            950: '#030712'
-                        },
-                        lilac: '#C084FC',
+                        'detran-blue': '#0054a3',
+                        'detran-light-blue': '#e6f1f8',
+                        'lilac': '#C084FC',
+                        'dark-gray': '#1f2937',
                     },
                     fontFamily: {
                         inter: ['Inter', 'sans-serif']
@@ -25,206 +25,472 @@
         }
     </script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
     <style>
-        .blog-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #1f2937;
+            background-color: #f7fafc;
         }
-        .blog-card:hover {
+        .card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+        .collapsible-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out;
+            background-color: #f9f9f9;
+            border-radius: 0.5rem;
+            padding: 0 1.5rem;
+        }
+        .collapsible-header.active + .collapsible-content {
+            max-height: 2000px; /* Valor alto o suficiente para qualquer conteúdo */
+            padding: 1.5rem;
+        }
+        .collapsible-header {
+            cursor: pointer;
+            position: relative;
+            padding-right: 2.5rem;
+        }
+        .collapsible-header::after {
+            content: '+';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: transform 0.3s ease-in-out;
+            font-size: 1.5rem;
+        }
+        .collapsible-header.active::after {
+            content: '−';
+            transform: translateY(-50%) rotate(0deg);
         }
     </style>
 </head>
-<body class="bg-gray-950 text-gray-300 font-inter">
+<body class="bg-gray-100">
 
-    <header class="fixed top-0 w-full z-50 border-b border-gray-800 bg-gray-950/80 backdrop-blur-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-            <a href="index.html" class="flex items-center gap-2 text-white font-extrabold text-xl">
-                <span>Agência</span><span class="text-lilac">Atthos</span>
-            </a>
-            <nav id="menu" class="hidden md:flex space-x-6">
-                <a href="index.html" class="hover:text-lilac transition-colors">Home</a>
-                <a href="servicos.html" class="hover:text-lilac transition-colors">Serviços</a>
-                <a href="quemsomos.html" class="hover:text-lilac transition-colors">Quem Somos</a>
-                <a href="blog-atthos.html" class="text-lilac font-semibold transition-colors">Blog</a>
-                <a href="contato.html" class="hover:text-lilac transition-colors">Contato</a>
+    <!-- Header -->
+    <header class="bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-6 flex flex-col md:flex-row items-center justify-between">
+            <div class="text-xl font-bold text-detran-blue">Atos Assessoria</div>
+            <nav class="mt-4 md:mt-0">
+                <ul class="flex space-x-4">
+                    <li><a href="#" class="text-gray-600 hover:text-detran-blue font-medium transition duration-300">Home</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-detran-blue font-medium transition duration-300">Serviços</a></li>
+                    <li><a href="#" class="text-detran-blue font-semibold hover:underline transition duration-300">Blog</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-detran-blue font-medium transition duration-300">Contato</a></li>
+                </ul>
             </nav>
-            <button id="menu-btn" class="md:hidden text-white focus:outline-none">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
-            </button>
         </div>
     </header>
 
-    <div id="mobile-menu" class="md:hidden bg-gray-800 text-white p-4 hidden mt-16">
-        <a href="index.html" class="block py-2 hover:bg-gray-700 rounded-md">Home</a>
-        <a href="servicos.html" class="block py-2 hover:bg-gray-700 rounded-md">Serviços</a>
-        <a href="quemsomos.html" class="block py-2 hover:bg-gray-700 rounded-md">Quem Somos</a>
-        <a href="blog-atthos.html" class="block py-2 bg-gray-700 rounded-md">Blog</a>
-        <a href="contato.html" class="block py-2 hover:bg-gray-700 rounded-md">Contato</a>
-    </div>
-
-    <main class="pt-16">
-        <section class="py-16 md:py-24 px-4">
-            <div class="container mx-auto max-w-7xl">
-                <div class="text-center mb-12">
-                    <h1 class="text-4xl sm:text-5xl font-extrabold text-white leading-tight">FAQ Blog</h1>
-                    <p class="text-lg text-gray-400 mt-4 max-w-2xl mx-auto">
-                        Guias práticos e artigos. Nossa missão vai além dos serviços. Aqui, compartilhamos informações valiosas para ajudar a todos, mesmo quem não pode pagar por um despachante.
-                    </p>
-                </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="blog-card p-6 bg-gray-800 rounded-lg shadow-xl text-center">
-                        <h3 class="text-2xl font-bold text-lilac mb-2">Como Pagar o IPVA de Forma Descomplicada</h3>
-                        <p class="text-gray-400 mb-4">Um guia prático com o passo a passo para não ter dor de cabeça na hora de pagar o imposto do seu veículo.</p>
-                        <a href="#" class="inline-block text-white font-semibold hover:text-lilac transition-colors">
-                            Ler Artigo Completo
-                            <span class="ml-1 text-lilac">&rarr;</span>
-                        </a>
-                    </div>
-                    <div class="blog-card p-6 bg-gray-800 rounded-lg shadow-xl text-center">
-                        <h3 class="text-2xl font-bold text-lilac mb-2">Renovação da CNH: O Que Mudou em 2024?</h3>
-                        <p class="text-gray-400 mb-4">Fique por dentro das novas regras e evite surpresas na hora de renovar sua carteira de motorista.</p>
-                        <a href="#" class="inline-block text-white font-semibold hover:text-lilac transition-colors">
-                            Ler Artigo Completo
-                            <span class="ml-1 text-lilac">&rarr;</span>
-                        </a>
-                    </div>
-                    <div class="blog-card p-6 bg-gray-800 rounded-lg shadow-xl text-center">
-                        <h3 class="text-2xl font-bold text-lilac mb-2">Multa Injusta? Saiba como Recorrer</h3>
-                        <p class="text-gray-400 mb-4">Conheça seus direitos e descubra o processo para contestar uma multa de trânsito que você considera indevida.</p>
-                        <a href="#" class="inline-block text-white font-semibold hover:text-lilac transition-colors">
-                            Ler Artigo Completo
-                            <span class="ml-1 text-lilac">&rarr;</span>
-                        </a>
-                    </div>
-                    <div class="blog-card p-6 bg-gray-800 rounded-lg shadow-xl text-center">
-                        <h3 class="text-2xl font-bold text-lilac mb-2">Licenciamento 2025: prazos e valores no seu estado</h3>
-                        <p class="text-gray-400 mb-4">Saiba tudo sobre o licenciamento anual, incluindo datas importantes e os valores para o seu veículo.</p>
-                        <a href="#" class="inline-block text-white font-semibold hover:text-lilac transition-colors">
-                            Ler Artigo Completo
-                            <span class="ml-1 text-lilac">&rarr;</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12">
+        <section class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-dark-gray leading-tight">Blog da Atos Assessoria</h1>
+            <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+                Aqui você encontra guias completos e informações relevantes sobre os principais serviços veiculares.
+            </p>
         </section>
 
-        <section id="comunidade-Atthos" class="py-16 md:py-24 px-4">
-            <div class="container mx-auto max-w-7xl">
-                <h2 class="text-4xl sm:text-5xl font-extrabold text-white text-center leading-tight mb-12">A Comunidade Atthos: Conexões e Aprendizado para o Seu Digital</h2>
-        
-                <p class="text-lg text-gray-400 mt-4 max-w-2xl mx-auto text-center">No nosso blog, você não está sozinho! Temos um espaço especial para você se conectar, aprender e crescer.</p>
-        
-                <div class="flex flex-wrap justify-center text-center gap-8 mt-12 mb-16">
-                    <div class="feature-item p-6 bg-gray-800 rounded-lg shadow-xl w-full sm:w-1/3 md:w-1/4 lg:w-1/5">
-                        <div class="mb-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users mx-auto text-lilac"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                        </div>
-                        <h3 class="text-2xl font-bold text-lilac mb-2">Conexões Reais</h3>
-                        <p class="text-gray-400">Troque experiências com outros profissionais e expanda seu networking.</p>
-                    </div>
-                    <div class="feature-item p-6 bg-gray-800 rounded-lg shadow-xl w-full sm:w-1/3 md:w-1/4 lg:w-1/5">
-                        <div class="mb-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-open mx-auto text-lilac"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-                        </div>
-                        <h3 class="text-2xl font-bold text-lilac mb-2">Aprendizado Contínuo</h3>
-                        <p class="text-gray-400">Acesse materiais, guias e artigos que vão turbinar seu conhecimento no digital.</p>
-                    </div>
-                    <div class="feature-item p-6 bg-gray-800 rounded-lg shadow-xl w-full sm:w-1/3 md:w-1/4 lg:w-1/5">
-                        <div class="mb-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-circle-more mx-auto text-lilac"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/><path d="M8 12h.01"/><path d="M12 12h.01"/><path d="M16 12h.01"/></svg>
-                        </div>
-                        <h3 class="text-2xl font-bold text-lilac mb-2">Comunidade Exclusiva</h3>
-                        <p class="text-gray-400">Faça parte de um grupo seleto para aprendizado e troca de experiências.</p>
-                    </div>
+        <!-- Blog Post Grid -->
+        <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+
+            <!-- Card para Licenciamento Anual -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 card">
+                <img src="https://placehold.co/600x400/94A3B8/ffffff?text=Licenciamento" alt="" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h2 class="text-xl font-bold text-detran-blue mb-2">Licenciamento Anual de Veículo</h2>
+                    <p class="text-gray-700 text-sm">Guia completo sobre o licenciamento anual do seu veículo. Entenda o processo, a documentação, os prazos e evite multas com a ajuda da Atos Assessoria.</p>
+                    <a href="#licenciamento-completo" class="mt-4 inline-block text-detran-blue font-semibold hover:underline transition duration-300">Leia Mais →</a>
                 </div>
-        
-                <div class="community-details p-8 bg-gray-800 rounded-lg shadow-xl mb-12">
-                    <h3 class="text-2xl font-bold text-white mb-4">O que você encontra na Comunidade Atthos?</h3>
-                    <ul class="list-disc list-inside space-y-2 text-gray-400">
-                        <li><strong>Conteúdo Prático:</strong> Dicas e materiais direto no seu WhatsApp.</li>
-                        <li><strong>Oportunidades:</strong> Acesso a vagas de emprego reais e confiáveis.</li>
-                        <li><strong>Curadoria de Aprendizagem:</strong> Cursos gratuitos de qualidade (EAD e presencial).</li>
-                        <li><strong>Suporte a Ferramentas:</strong> Ajuda com currículo, LinkedIn e preparação para entrevistas.</li>
-                    </ul>
+            </div>
+
+            <!-- Card para Transferência de Veículo -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 card">
+                <img src="https://placehold.co/600x400/6B7280/ffffff?text=Transferencia" alt="" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h2 class="text-xl font-bold text-detran-blue mb-2">Transferência de Veículo</h2>
+                    <p class="text-gray-700 text-sm">Conheça a documentação necessária, o passo a passo e como a Atos Assessoria garante uma transação segura e sem dor de cabeça.</p>
+                    <a href="#transferencia-completo" class="mt-4 inline-block text-detran-blue font-semibold hover:underline transition duration-300">Leia Mais →</a>
                 </div>
-        
-                <div class="how-to-participate text-center mb-12">
-                    <h3 class="text-2xl font-bold text-white mb-4">Como Participar?</h3>
-                    <p class="text-lg text-gray-400 mb-6">É simples! Acompanhe no seu ritmo direto no seu WhatsApp. Acesse o grupo da comunidade:</p>
-                    <a href="https://chat.whatsapp.com/IvqcP74tFj3HhJXXkxzzqX" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-green-500 hover:bg-green-600 transition-colors" target="_blank">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-whatsapp mr-2"><path d="M16.7 18.2a.8.8 0 0 1-.6-.3.8.8 0 0 1-.2-.6c0-.3.1-.6.2-.8l1.4-1.4c.2-.2.5-.2.7 0l.5.5c.2.2.2.5 0 .7l-1.4 1.4c-.2.2-.4.3-.7.3z"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zM9 16.5l.5-.5a.8.8 0 0 1 .6-.2.8.8 0 0 1 .6.2l1.4 1.4c.2.2.5.2.7 0l.5-.5c.2-.2.2-.5 0-.7l-1.4-1.4c-.2-.2-.4-.3-.7-.3z"/><path d="M12 18.5a6.5 6.5 0 1 1 0-13 6.5 6.5 0 0 1 0 13z"/><path d="M15.5 10.5l-1.4 1.4a.8.8 0 0 1-1.2 0l-.5-.5a.8.8 0 0 1 0-1.2l1.4-1.4c.4-.4 1-.4 1.4 0l.5.5c.4.4.4 1 0 1.4z"/></svg>
-                        Entrar na Comunidade no WhatsApp
-                    </a>
+            </div>
+
+            <!-- Card para Como Recorrer de Multas -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 card">
+                <img src="https://placehold.co/600x400/4B5563/ffffff?text=Multas" alt="" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h2 class="text-xl font-bold text-detran-blue mb-2">Como Recorrer de Multas</h2>
+                    <p class="text-gray-700 text-sm">Saiba como recorrer de uma multa de trânsito de forma simples. Entenda os prazos, a documentação necessária e conte com a Atos Assessoria.</p>
+                    <a href="#multas-completo" class="mt-4 inline-block text-detran-blue font-semibold hover:underline transition duration-300">Leia Mais →</a>
                 </div>
-        
-                <div class="official-channels mb-12">
-                    <h3 class="text-2xl font-bold text-white mb-4">Canais Oficiais</h3>
-                    <ul class="space-y-4">
-                        <li class="p-6 bg-gray-800 rounded-lg shadow-xl">
-                            <h4 class="text-xl font-semibold text-lilac mb-2">Canal Da Agência Atthos | Conexões e Publicidade/Ofertas</h4>
-                            <p class="text-gray-400 mb-2">Acesso a conteúdos como e-books, templates e guias práticos.</p>
-                            <a href="https://whatsapp.com/channel/0029VaiI4Z42UPBLfB0wkQ2S" class="text-white font-semibold hover:text-lilac transition-colors" target="_blank">Acesse aqui &rarr;</a>
+            </div>
+            
+            <!-- Card para Isenção de PCD -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 card">
+                <img src="https://placehold.co/600x400/292524/ffffff?text=Isencao+PCD" alt="" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h2 class="text-xl font-bold text-detran-blue mb-2">Isenção para PCD</h2>
+                    <p class="text-gray-700 text-sm">Descubra como conseguir a isenção de impostos (IPI, ICMS, IPVA) e CNH especial. A Atos Assessoria simplifica todo o processo para pessoas com deficiência.</p>
+                    <a href="#isencao-pcd-completo" class="mt-4 inline-block text-detran-blue font-semibold hover:underline transition duration-300">Leia Mais →</a>
+                </div>
+            </div>
+            
+            <!-- Card para Primeiro Emplacamento -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 card">
+                <img src="https://placehold.co/600x400/D1D5DB/ffffff?text=Emplacamento" alt="" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h2 class="text-xl font-bold text-detran-blue mb-2">Primeiro Emplacamento</h2>
+                    <p class="text-gray-700 text-sm">Guia completo para o primeiro emplacamento do seu carro 0km. Descubra a documentação necessária e como a Atos Assessoria agiliza o processo para você.</p>
+                    <a href="#emplacamento-completo" class="mt-4 inline-block text-detran-blue font-semibold hover:underline transition duration-300">Leia Mais →</a>
+                </div>
+            </div>
+
+            <!-- Card para O que é RENAINF -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 card">
+                <img src="https://placehold.co/600x400/E5E7EB/ffffff?text=RENAINF" alt="" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h2 class="text-xl font-bold text-detran-blue mb-2">O que é RENAINF?</h2>
+                    <p class="text-gray-700 text-sm">Descubra o que é o Renainf e como ele impacta as multas de trânsito do seu veículo. A Atos Assessoria te ajuda a regularizar débitos de outros estados.</p>
+                    <a href="#renainf-completo" class="mt-4 inline-block text-detran-blue font-semibold hover:underline transition duration-300">Leia Mais →</a>
+                </div>
+            </div>
+
+            <!-- Card: O que é o DETRAN? -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 card">
+                <img src="https://placehold.co/600x400/0054a3/ffffff?text=DETRAN" alt="" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h2 class="text-xl font-bold text-detran-blue mb-2">O que é o DETRAN?</h2>
+                    <p class="text-gray-700 text-sm">Entenda a função e a importância do Departamento Estadual de Trânsito (DETRAN) e como ele regula os serviços veiculares e de habilitação no Brasil.</p>
+                    <a href="#detran-completo" class="mt-4 inline-block text-detran-blue font-semibold hover:underline transition duration-300">Leia Mais →</a>
+                </div>
+            </div>
+
+            <!-- Card: Como Pagar o IPVA -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 card">
+                <img src="https://placehold.co/600x400/FACC15/ffffff?text=IPVA" alt="" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h2 class="text-xl font-bold text-detran-blue mb-2">Como Pagar o IPVA</h2>
+                    <p class="text-gray-700 text-sm">Passo a passo completo sobre como consultar e pagar o seu Imposto sobre a Propriedade de Veículos Automotores (IPVA), evitando multas e juros.</p>
+                    <a href="#ipva-completo" class="mt-4 inline-block text-detran-blue font-semibold hover:underline transition duration-300">Leia Mais →</a>
+                </div>
+            </div>
+
+            <!-- Card: Renovação da CNH -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 card">
+                <img src="https://placehold.co/600x400/10B981/ffffff?text=CNH" alt="" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h2 class="text-xl font-bold text-detran-blue mb-2">Renovação da CNH</h2>
+                    <p class="text-gray-700 text-sm">Saiba tudo sobre o processo de renovação da sua Carteira Nacional de Habilitação (CNH). Veja a documentação, exames e prazos para manter sua habilitação regularizada.</p>
+                    <a href="#cnh-completo" class="mt-4 inline-block text-detran-blue font-semibold hover:underline transition duration-300">Leia Mais →</a>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Seção de Guias e FAQ (Conteúdo Expansível) -->
+        <section class="mt-20">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-dark-gray text-center mb-8">Guias Completos e Perguntas Frequentes</h2>
+
+            <!-- Guia: Licenciamento Anual de Veículo -->
+            <div id="licenciamento-completo" class="bg-white rounded-xl shadow-lg mb-6">
+                <div class="collapsible-header flex items-center justify-between p-6">
+                    <h3 class="text-xl font-bold text-detran-blue">Guia Completo de Licenciamento Anual de Veículo</h3>
+                </div>
+                <div class="collapsible-content">
+                    <p class="text-gray-700 text-base mb-4">O licenciamento anual é um procedimento obrigatório para todos os proprietários de veículos. Ele garante que seu carro, moto ou caminhão está em conformidade com as normas de segurança e emissões.</p>
+                    <ol class="list-decimal list-inside space-y-4 text-gray-700">
+                        <li>
+                            <p class="font-semibold">Passo 1: Verifique os débitos</p>
+                            <p>O primeiro passo é garantir que não há débitos pendentes, como IPVA, DPVAT e multas. Você pode consultar no site do Detran-SP ou em aplicativos oficiais.</p>
                         </li>
-                    </ul>
-                </div>
-        
-                <div class="rules p-8 bg-gray-800 rounded-lg shadow-xl">
-                    <h3 class="text-2xl font-bold text-white mb-4">Regras e Convivência</h3>
-                    <p class="text-gray-400 mb-4">Para garantir um ambiente produtivo e respeitoso:</p>
-                    <ul class="list-none space-y-2 text-gray-400">
-                        <li>🤝 Respeito é obrigatório: Sem ofensas ou preconceitos.</li>
-                        <li>🚫 Conteúdo proibido: Pornografia, violência, discurso de ódio.</li>
-                        <li>🔒 Privacidade: Não compartilhe dados pessoais de terceiros.</li>
-                        <li>⛔ Sem spam: Grupos são para troca real, não autopromoção.</li>
-                        <li>⭐ Respeite admins e moderadores.</li>
-                        <li>🚨 Denuncie irregularidades.</li>
-                        <li>💡 Colabore e aprenda.</li>
-                    </ul>
-                    <p class="text-sm italic text-gray-500 mt-4">Dúvidas? Fale com os ADMs. Mantenha o foco em carreira e oportunidades.</p>
+                        <li>
+                            <p class="font-semibold">Passo 2: Pague as taxas</p>
+                            <p>Com os débitos em dia, pague a taxa de licenciamento e, se necessário, o seguro obrigatório DPVAT. O pagamento pode ser feito em agências bancárias, caixas eletrônicos ou online, usando o número do RENAVAM.</p>
+                        </li>
+                        <li>
+                            <p class="font-semibold">Passo 3: Baixe o documento</p>
+                            <p>Após a compensação do pagamento (geralmente em 1-2 dias úteis), o Certificado de Registro e Licenciamento de Veículo (CRLV-e) estará disponível para download e impressão no aplicativo da Carteira Digital de Trânsito (CDT) ou no site do Detran.</p>
+                        </li>
+                    </ol>
+                    <div class="mt-6">
+                        <a href="https://www.detran.sp.gov.br/wps/portal/portaldetran/cidadao/servicos/servicosOnline" target="_blank" class="text-detran-blue font-semibold hover:underline text-sm flex items-center">
+                            <span class="mr-2">🔗</span> Fonte: Detran-SP
+                        </a>
+                    </div>
                 </div>
             </div>
+
+            <!-- Guia: Transferência de Veículo -->
+            <div id="transferencia-completo" class="bg-white rounded-xl shadow-lg mb-6">
+                <div class="collapsible-header flex items-center justify-between p-6">
+                    <h3 class="text-xl font-bold text-detran-blue">Guia Completo de Transferência de Veículo</h3>
+                </div>
+                <div class="collapsible-content">
+                    <p class="text-gray-700 text-base mb-4">A transferência de veículo é a mudança de propriedade de um automóvel. É fundamental para garantir que o novo dono seja legalmente responsável pelo veículo.</p>
+                    <ol class="list-decimal list-inside space-y-4 text-gray-700">
+                        <li>
+                            <p class="font-semibold">Passo 1: Vistoria do veículo</p>
+                            <p>Realize a vistoria de identificação veicular em uma empresa credenciada. O laudo é obrigatório e certifica a autenticidade e a condição do veículo.</p>
+                        </li>
+                        <li>
+                            <p class="font-semibold">Passo 2: Reconhecimento de firma</p>
+                            <p>Vendedor e comprador devem assinar o Certificado de Registro de Veículo (CRV) e reconhecer a firma no cartório, por autenticidade.</p>
+                        </li>
+                        <li>
+                            <p class="font-semibold">Passo 3: Pague as taxas e envie a documentação</p>
+                            <p>Pague a taxa de transferência e o IPVA (se houver débitos). Em seguida, envie toda a documentação necessária (CRV assinado, laudo de vistoria, documentos pessoais, etc.) ao Detran para concluir o processo.</p>
+                        </li>
+                    </ol>
+                    <div class="mt-6">
+                        <a href="https://www.detran.sp.gov.br/wps/portal/portaldetran/cidadao/servicos/servicosOnline" target="_blank" class="text-detran-blue font-semibold hover:underline text-sm flex items-center">
+                            <span class="mr-2">🔗</span> Fonte: Detran-SP
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Guia: Renovação da CNH -->
+            <div id="cnh-completo" class="bg-white rounded-xl shadow-lg mb-6">
+                <div class="collapsible-header flex items-center justify-between p-6">
+                    <h3 class="text-xl font-bold text-detran-blue">Guia Completo de Renovação da CNH</h3>
+                </div>
+                <div class="collapsible-content">
+                    <p class="text-gray-700 text-base mb-4">A renovação da CNH é um processo que deve ser feito a cada período para garantir que o motorista está apto a dirigir.</p>
+                    <ol class="list-decimal list-inside space-y-4 text-gray-700">
+                        <li>
+                            <p class="font-semibold">Passo 1: Solicite a renovação</p>
+                            <p>Acesse o site do Detran do seu estado e solicite a renovação da CNH. Preencha os dados e escolha a clínica para o exame médico e psicotécnico (se necessário).</p>
+                        </li>
+                        <li>
+                            <p class="font-semibold">Passo 2: Realize os exames</p>
+                            <p>Compareça à clínica para o exame médico de aptidão física e mental. Dependendo da categoria da sua CNH, pode ser necessário também o exame psicotécnico.</p>
+                        </li>
+                        <li>
+                            <p class="font-semibold">Passo 3: Pague as taxas e receba o documento</p>
+                            <p>Pague as taxas de emissão da CNH e de exames. A nova CNH digital estará disponível no aplicativo da Carteira Digital de Trânsito (CDT) e a versão impressa será enviada para o seu endereço.</p>
+                        </li>
+                    </ol>
+                    <div class="mt-6">
+                        <a href="https://www.detran.sp.gov.br/wps/portal/portaldetran/cidadao/habilitacao/fichaservico/renovacaoCNH" target="_blank" class="text-detran-blue font-semibold hover:underline text-sm flex items-center">
+                            <span class="mr-2">🔗</span> Fonte: Detran-SP
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Guia: Como Pagar o IPVA -->
+            <div id="ipva-completo" class="bg-white rounded-xl shadow-lg mb-6">
+                <div class="collapsible-header flex items-center justify-between p-6">
+                    <h3 class="text-xl font-bold text-detran-blue">Como Pagar o IPVA</h3>
+                </div>
+                <div class="collapsible-content">
+                    <p class="text-gray-700 text-base mb-4">O IPVA é um imposto anual cobrado sobre a propriedade de veículos. Fique atento aos prazos para evitar juros e multas.</p>
+                    <ol class="list-decimal list-inside space-y-4 text-gray-700">
+                        <li>
+                            <p class="font-semibold">Passo 1: Consulte o valor e o vencimento</p>
+                            <p>Você pode consultar o valor e a data de vencimento do IPVA no site da Secretaria da Fazenda (Sefaz) do seu estado, informando o número do RENAVAM e a placa do veículo.</p>
+                        </li>
+                        <li>
+                            <p class="font-semibold">Passo 2: Escolha a forma de pagamento</p>
+                            <p>O IPVA pode ser pago em cota única (com desconto) ou parcelado. O pagamento pode ser feito em bancos, casas lotéricas ou pelo Pix, usando o código de barras ou o QR Code gerado.</p>
+                        </li>
+                        <li>
+                            <p class="font-semibold">Passo 3: Emita a guia de pagamento</p>
+                            <p>A guia de pagamento (boleto ou DARE) pode ser emitida no site da Sefaz. Com a guia em mãos, basta realizar o pagamento na rede bancária.</p>
+                        </li>
+                    </ol>
+                    <div class="mt-6">
+                        <a href="https://portal.fazenda.sp.gov.br/servicos/ipva/Paginas/guia.aspx" target="_blank" class="text-detran-blue font-semibold hover:underline text-sm flex items-center">
+                            <span class="mr-2">🔗</span> Fonte: Secretaria da Fazenda de São Paulo
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Guia: Como Recorrer de Multas -->
+            <div id="multas-completo" class="bg-white rounded-xl shadow-lg mb-6">
+                <div class="collapsible-header flex items-center justify-between p-6">
+                    <h3 class="text-xl font-bold text-detran-blue">Como Recorrer de Multas</h3>
+                </div>
+                <div class="collapsible-content">
+                    <p class="text-gray-700 text-base mb-4">Se você recebeu uma multa indevida, é possível recorrer para anular a penalidade. O processo exige atenção aos prazos e à documentação.</p>
+                    <ol class="list-decimal list-inside space-y-4 text-gray-700">
+                        <li>
+                            <p class="font-semibold">Passo 1: Defesa Prévia</p>
+                            <p>Ao receber a Notificação de Autuação, você tem um prazo para apresentar a Defesa Prévia, questionando erros formais da multa, como dados incorretos ou inconsistências na autuação.</p>
+                        </li>
+                        <li>
+                            <p class="font-semibold">Passo 2: Recurso em 1ª Instância (JARI)</p>
+                            <p>Se a Defesa Prévia for indeferida, você pode entrar com um Recurso à Junta Administrativa de Recursos de Infrações (JARI). Esta é a primeira análise do mérito do seu caso.</p>
+                        </li>
+                        <li>
+                            <p class="font-semibold">Passo 3: Recurso em 2ª Instância (CETRAN)</p>
+                            <p>Caso o recurso à JARI seja negado, você ainda pode recorrer ao Conselho Estadual de Trânsito (CETRAN) em 2ª instância. Essa é a última oportunidade para contestar a multa administrativamente.</p>
+                        </li>
+                    </ol>
+                    <div class="mt-6">
+                        <a href="https://www.detran.sp.gov.br/wps/portal/portaldetran/cidadao/infracoes/fichaservico/recursoMulta" target="_blank" class="text-detran-blue font-semibold hover:underline text-sm flex items-center">
+                            <span class="mr-2">🔗</span> Fonte: Detran-SP
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Guia: Isenção para PCD -->
+            <div id="isencao-pcd-completo" class="bg-white rounded-xl shadow-lg mb-6">
+                <div class="collapsible-header flex items-center justify-between p-6">
+                    <h3 class="text-xl font-bold text-detran-blue">Isenção para PCD</h3>
+                </div>
+                <div class="collapsible-content">
+                    <p class="text-gray-700 text-base mb-4">Pessoas com deficiência (PCD) ou seus representantes legais têm direito à isenção de impostos na compra de veículos. Isso inclui IPI, ICMS, IOF e, em alguns casos, IPVA.</p>
+                    <ol class="list-decimal list-inside space-y-4 text-gray-700">
+                        <li>
+                            <p class="font-semibold">Passo 1: Laudo Médico</p>
+                            <p>O primeiro passo é obter um laudo médico que comprove a deficiência. Esse laudo deve ser emitido por médicos credenciados pelo SUS ou clínicas autorizadas.</p>
+                        </li>
+                        <li>
+                            <p class="font-semibold">Passo 2: CNH Especial</p>
+                            <p>Caso a deficiência afete a capacidade de dirigir, é necessário obter ou adaptar a CNH para a categoria especial. Isso envolve exames específicos em clínicas credenciadas.</p>
+                        </li>
+                        <li>
+                            <p class="font-semibold">Passo 3: Solicitação das isenções</p>
+                            <p>Com os documentos em mãos (laudo médico, CNH especial, etc.), solicite as isenções de impostos nos órgãos competentes, como a Receita Federal (para IPI) e a Sefaz (para ICMS e IPVA).</p>
+                        </li>
+                    </ol>
+                    <div class="mt-6">
+                        <a href="https://www.detran.sp.gov.br/wps/portal/portaldetran/cidadao/habilitacao/fichaservico/IsencaoPCD" target="_blank" class="text-detran-blue font-semibold hover:underline text-sm flex items-center">
+                            <span class="mr-2">🔗</span> Fonte: Detran-SP
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Guia: Primeiro Emplacamento -->
+            <div id="emplacamento-completo" class="bg-white rounded-xl shadow-lg mb-6">
+                <div class="collapsible-header flex items-center justify-between p-6">
+                    <h3 class="text-xl font-bold text-detran-blue">Guia de Primeiro Emplacamento</h3>
+                </div>
+                <div class="collapsible-content">
+                    <p class="text-gray-700 text-base mb-4">O primeiro emplacamento é o processo para registrar um veículo zero quilômetro junto ao Detran e ao Denatran, permitindo que ele circule legalmente.</p>
+                    <ol class="list-decimal list-inside space-y-4 text-gray-700">
+                        <li>
+                            <p class="font-semibold">Passo 1: Reúna os documentos</p>
+                            <p>Junte a Nota Fiscal de compra, documentos pessoais do proprietário (RG, CPF ou CNH), comprovante de endereço e o decalque do chassi.</p>
+                        </li>
+                        <li>
+                            <p class="font-semibold">Passo 2: Pague as taxas</p>
+                            <p>Pague as taxas de primeiro registro e o IPVA proporcional do ano, além do DPVAT e da taxa de licenciamento.</p>
+                        </li>
+                        <li>
+                            <p class="font-semibold">Passo 3: Vistoria e Agendamento</p>
+                            <p>Realize a vistoria de identificação veicular em uma empresa credenciada e, se necessário, agende o serviço de registro e emplacamento no site do Detran.</p>
+                        </li>
+                        <li>
+                            <p class="font-semibold">Passo 4: Retire as placas e o CRLV-e</p>
+                            <p>Após a aprovação do processo, você pode solicitar a fabricação e instalação das placas e terá acesso ao CRLV-e digital para download.</p>
+                        </li>
+                    </ol>
+                    <div class="mt-6">
+                        <a href="https://www.detran.sp.gov.br/wps/portal/portaldetran/cidadao/veiculos/fichaservico/primeiroEmplacamento" target="_blank" class="text-detran-blue font-semibold hover:underline text-sm flex items-center">
+                            <span class="mr-2">🔗</span> Fonte: Detran-SP
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Guia: O que é RENAINF -->
+            <div id="renainf-completo" class="bg-white rounded-xl shadow-lg mb-6">
+                <div class="collapsible-header flex items-center justify-between p-6">
+                    <h3 class="text-xl font-bold text-detran-blue">O que é RENAINF?</h3>
+                </div>
+                <div class="collapsible-content">
+                    <p class="text-gray-700 text-base mb-4">O Registro Nacional de Infrações de Trânsito (RENAINF) é um sistema que unifica as informações sobre multas de trânsito cometidas em qualquer lugar do Brasil, independentemente do estado onde o veículo foi registrado.</p>
+                    <p class="text-gray-700 text-base mb-4">Ele foi criado para facilitar a gestão e a cobrança de multas interestaduais, garantindo que o proprietário do veículo possa regularizar os débitos e não seja impedido de licenciar seu veículo por conta de multas em outros estados.</p>
+                    <div class="mt-6">
+                        <a href="https://www.gov.br/infraestrutura/pt-br/assuntos/transito/servicos-de-transito/renainf" target="_blank" class="text-detran-blue font-semibold hover:underline text-sm flex items-center">
+                            <span class="mr-2">🔗</span> Fonte: Governo Federal (SENATRAN)
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Guia: O que é o DETRAN? -->
+            <div id="detran-completo" class="bg-white rounded-xl shadow-lg mb-6">
+                <div class="collapsible-header flex items-center justify-between p-6">
+                    <h3 class="text-xl font-bold text-detran-blue">O que é o DETRAN?</h3>
+                </div>
+                <div class="collapsible-content">
+                    <p class="text-gray-700 text-base mb-4">O Departamento Estadual de Trânsito (DETRAN) é o órgão responsável pela fiscalização, regulamentação e gestão do trânsito nos estados. Ele atua em duas frentes principais: veículos e habilitação.</p>
+                    <p class="text-gray-700 text-base mb-4 font-semibold">Funções Principais:</p>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li>**Registro e licenciamento de veículos:** Emissão de documentos como CRLV (licenciamento) e CRV (documento de transferência).</li>
+                        <li>**Habilitação de condutores:** Emissão e renovação da CNH, aplicação de exames teóricos e práticos.</li>
+                        <li>**Fiscalização:** Monitoramento de infrações de trânsito e aplicação de penalidades.</li>
+                    </ul>
+                    <div class="mt-6">
+                        <a href="https://www.detran.sp.gov.br/wps/portal/portaldetran/detran/detranonline/quem_e_quem" target="_blank" class="text-detran-blue font-semibold hover:underline text-sm flex items-center">
+                            <span class="mr-2">🔗</span> Fonte: Detran-SP
+                        </a>
+                    </div>
+                </div>
+            </div>
+
         </section>
+
     </main>
 
-    <footer class="bg-gray-950 py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap justify-between items-start gap-8">
-            <div class="w-full md:w-auto text-center md:text-left mb-6 md:mb-0">
-                <h4 class="text-2xl font-bold text-white mb-2">Agência Atthos</h4>
-                <p class="text-sm text-gray-400">Suporte digital, simplificado.</p>
-            </div>
-            <div class="flex flex-col items-center md:items-start text-center md:text-left mb-6 md:mb-0">
-                <h4 class="text-xl font-semibold text-white mb-4">Navegação</h4>
-                <ul class="space-y-2 text-sm text-gray-400">
-                    <li><a href="index.html" class="hover:text-lilac transition-colors">Home</a></li>
-                    <li><a href="servicos.html" class="hover:text-lilac transition-colors">Serviços</a></li>
-                    <li><a href="quemsomos.html" class="hover:text-lilac transition-colors">Quem Somos</a></li>
-                    <li><a href="blog-atthos.html" class="hover:text-lilac transition-colors">Blog</a></li>
-                    <li><a href="contato.html" class="hover:text-lilac transition-colors">Contato</a></li>
-                </ul>
-            </div>
-            <div class="flex flex-col items-center md:items-start text-center md:text-left">
-                <h4 class="text-xl font-semibold text-white mb-4">Siga-nos</h4>
-                <div class="flex space-x-4">
-                    <a href="#" class="text-gray-400 hover:text-lilac transition-colors" aria-label="Facebook">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-lilac transition-colors" aria-label="Instagram">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.5" y1="6.5" y2="6.5"/></svg>
-                    </a>
-                    <a href="https://wa.me/SEU-NUMERO-WHATSAPP" class="text-gray-400 hover:text-lilac transition-colors" target="_blank" aria-label="WhatsApp">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-circle-code"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/><path d="M10 13a5 5 0 0 0 7.54 2.245 5 5 0 1 0-7.54-2.245z"/><path d="M11 5a5 5 0 0 1 7.54 2.245 5 5 0 1 0-7.54-2.245z"/><path d="M8 17.54a5 5 0 0 0 2.245 7.54 5 5 0 1 0-7.54-2.245z"/><path d="M13 13a5 5 0 0 0-2.245-7.54 5 5 0 1 0 7.54 2.245z"/><path d="M8 12.5a5 5 0 0 1 5-5h1.54"/></svg>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mt-10 pt-8 border-t border-gray-800">
-            <p class="text-sm text-gray-500">&copy; <span id="current-year">2024</span> Agência Atthos. Todos os direitos reservados.</p>
+    <!-- Footer -->
+    <footer class="bg-detran-blue text-white py-8 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-sm opacity-80">&copy; 2025 Atos Assessoria. Todos os direitos reservados.</p>
+            <p class="text-xs opacity-60 mt-2">Conteúdos relevantes para simplificar sua vida veicular.</p>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const collapsibleHeaders = document.querySelectorAll('.collapsible-header');
 
+            collapsibleHeaders.forEach(header => {
+                header.addEventListener('click', () => {
+                    const content = header.nextElementSibling;
+                    const isActive = header.classList.contains('active');
+
+                    // Fecha todos os outros que estão abertos
+                    collapsibleHeaders.forEach(otherHeader => {
+                        if (otherHeader !== header && otherHeader.classList.contains('active')) {
+                            otherHeader.classList.remove('active');
+                            otherHeader.nextElementSibling.style.maxHeight = '0';
+                            otherHeader.nextElementSibling.style.padding = '0 1.5rem';
+                        }
+                    });
+
+                    // Alterna o estado do header clicado
+                    if (isActive) {
+                        header.classList.remove('active');
+                        content.style.maxHeight = '0';
+                        content.style.padding = '0 1.5rem';
+                    } else {
+                        header.classList.add('active');
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                        content.style.padding = '1.5rem';
+                    }
+                });
+            });
+
+            // Lidar com o hash na URL para abrir o guia correto ao carregar a página
+            if (window.location.hash) {
+                const targetId = window.location.hash;
+                const targetHeader = document.querySelector(targetId + ' .collapsible-header');
+                if (targetHeader) {
+                    targetHeader.click();
+                    setTimeout(() => {
+                        targetHeader.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }, 500);
+                }
+            }
+        });
+    </script>
 </body>
 </html>
