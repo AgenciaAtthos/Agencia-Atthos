@@ -1,4 +1,4 @@
-Agência Atthos  - Hub digital de serviço e Suportt
+Agência Atthos  - Hub de serviços e Suporte digital
 
 ---
 
@@ -24,6 +24,7 @@ Instagram: https://www.instagram.com/agenciaatthoss
 
 ### ⚠️ Aviso de Direitos Autorais
 Este é um projeto proprietário da **Agência Atthos**. Todos os direitos estão reservados. O uso, cópia, distribuição ou modificação deste código é estritamente proibido sem autorização expressa.
+
 
 
 
