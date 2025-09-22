@@ -5,248 +5,191 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Serviços | Agência Atthos</title>
     <meta name="description" content="Conheça os serviços da Agência Atthos: Consultoria, Suporte Digital e soluções de Marketing e Negócios Digitais.">
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        gray: {
-                            950: '#030712'
-                        },
-                        lilac: '#C084FC',
-                    },
-                    fontFamily: {
-                        inter: ['Inter', 'sans-serif']
-                    }
-                }
-            }
-        }
-    </script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwind.config.js"></script>
+    <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/lucide@latest"></script>
-    <style>
-        .service-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-        }
-        .philosophy-card {
-            background-color: #111827;
-        }
-    </style>
+    <script src="script.js"></script>
 </head>
-<body class="bg-gray-950 text-gray-300 font-inter">
+<body class="bg-principal-background text-branco-suave font-texto-corrido">
 
-    <header class="fixed top-0 w-full z-50 border-b border-gray-800 bg-gray-950/80 backdrop-blur-sm">
+    <header class="fixed top-0 w-full z-50 border-b border-cards-surfaces bg-principal-background/80 backdrop-blur-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-            <a href="index.html" class="flex items-center gap-2 text-white font-extrabold text-xl">
-                <span>Agência</span><span class="text-lilac">Atthos</span>
+            <a href="index.html" class="flex items-center gap-2 text-texto-principal font-extrabold text-xl">
+                <span>Agência</span><span class="text-lilas-complementar">Atthos</span>
             </a>
             <nav id="menu" class="hidden md:flex space-x-6">
-                <a href="index.html" class="hover:text-lilac transition-colors">Home</a>
-                <a href="servicos.html" class="text-lilac transition-colors font-semibold">Serviços</a>
-                <a href="quemsomos.html" class="hover:text-lilac transition-colors">Quem Somos</a>
-                <a href="blog-atthos.html" class="hover:text-lilac transition-colors">Blog</a>
-                <a href="contato.html" class="hover:text-lilac transition-colors">Contato</a>
+                <a href="index.html" class="hover:text-lilas-complementar transition-colors">Home</a>
+                <a href="servicos.html" class="hover:text-lilas-complementar transition-colors">Serviços</a>
+                <a href="quemsomos.html" class="hover:text-lilas-complementar transition-colors">Quem Somos</a>
+                <a href="blog-atthos.html" class="hover:text-lilas-complementar transition-colors">Blog</a>
+                <a href="contato.html" class="hover:text-lilas-complementar transition-colors">Contato</a>
             </nav>
-            <button id="menu-btn" class="md:hidden text-white focus:outline-none">
+            <button id="menu-btn" class="md:hidden text-texto-principal focus:outline-none">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
             </button>
         </div>
+        <div id="mobile-menu" class="md:hidden bg-cards-surfaces text-texto-principal p-4 hidden">
+            <nav class="flex flex-col space-y-2">
+                <a href="index.html" class="py-2 px-4 hover:bg-roxo-claro-hover rounded transition-colors">Home</a>
+                <a href="servicos.html" class="py-2 px-4 hover:bg-roxo-claro-hover rounded transition-colors">Serviços</a>
+                <a href="quemsomos.html" class="py-2 px-4 hover:bg-roxo-claro-hover rounded transition-colors">Quem Somos</a>
+                <a href="blog-atthos.html" class="py-2 px-4 hover:bg-roxo-claro-hover rounded transition-colors">Blog</a>
+                <a href="contato.html" class="py-2 px-4 hover:bg-roxo-claro-hover rounded transition-colors">Contato</a>
+            </nav>
+        </div>
     </header>
-
-    <div id="mobile-menu" class="md:hidden bg-gray-800 text-white p-4 hidden mt-16">
-        <a href="index.html" class="block py-2 hover:bg-gray-700 rounded-md">Home</a>
-        <a href="servicos.html" class="block py-2 bg-gray-700 rounded-md">Serviços</a>
-        <a href="quemsomos.html" class="block py-2 hover:bg-gray-700 rounded-md">Quem Somos</a>
-        <a href="blog-atthos.html" class="block py-2 hover:bg-gray-700 rounded-md">Blog</a>
-        <a href="contato.html" class="block py-2 hover:bg-gray-700 rounded-md">Contato</a>
-    </div>
-
-    <main class="pt-16">
-        <section class="py-16 px-4">
-            <div class="container mx-auto max-w-7xl">
-                <div class="text-center mb-12">
-                    <h1 class="text-4xl sm:text-5xl font-extrabold text-white leading-tight">
-                        Serviços para Simplificar seu Dia
-                    </h1>
-                    <p class="text-lg text-gray-400 mt-4 max-w-2xl mx-auto">
-                        Soluções práticas e seguras para suas necessidades burocráticas e digitais.
-                    </p>
-                </div>
-                
-                <h2 class="text-2xl sm:text-3xl font-bold text-white leading-tight mb-8">Consultoria e Suporte Digital</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-                    <!-- Assessoria Veicular -->
-                    <div class="service-card p-6 bg-gray-800 rounded-lg shadow-lg flex flex-col justify-between">
-                        <div>
-                            <h3 class="text-xl font-bold text-white mb-2">Assessoria Veicular</h3>
-                            <p class="text-gray-400 text-sm mb-4">Resolva toda a papelada do seu veículo, do licenciamento à regularização de multas.</p>
-                            <ul class="list-disc list-inside text-gray-400 text-sm">
-                                <li>Licenciamento, IPVA e regularização.</li>
-                                <li>Emissão de documentos (ATPV, CRV, CRLV).</li>
-                                <li>Transferência de propriedade.</li>
-                                <li>Consulta de débitos e multas.</li>
-                            </ul>
-                        </div>
-                        <a href="https://wa.me/11965391331?text=Olá, tenho interesse no serviço de Assessoria Veicular." target="_blank" class="mt-4 inline-block bg-lilac text-white font-bold py-2 px-4 rounded-full text-center hover:bg-lilac/90 transition-colors">
-                            Fale conosco
-                        </a>
+    
+    <main>
+        <section class="py-20 px-4">
+            <div class="max-w-7xl mx-auto text-center py-12">
+                <h1 class="text-4xl md:text-5xl font-extrabold font-titulos text-roxo-primario">Nossos Serviços</h1>
+                <p class="mt-4 text-lg text-cinza-medio max-w-2xl mx-auto">
+                    Conheça as nossas soluções digitais, pensadas para o seu crescimento.
+                </p>
+            </div>
+        </section>
+    
+        <section id="consultoria" class="py-12 bg-cards-surfaces">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="md:flex md:items-center md:justify-between gap-8">
+                    <div class="md:w-1/2">
+                        <h2 class="text-3xl font-bold font-titulos text-lilas-complementar">Consultoria Estratégica</h2>
+                        <p class="mt-4 text-cinza-medio leading-relaxed">
+                            Vamos além da tecnologia. Nossa consultoria foca em entender seu negócio a fundo, identificar gargalos e criar um plano de ação robusto. Analisamos seu mercado, seus processos e suas metas para garantir que a tecnologia seja uma aliada, não um obstáculo.
+                        </p>
+                        <ul class="mt-6 space-y-4 text-cinza-medio">
+                            <li class="flex items-start gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle text-roxo-primario flex-shrink-0"><path d="M22 11.08V12a10 10 0 1 1-5.93-8.77"/></svg>
+                                Análise de Mercado e Concorrência.
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle text-roxo-primario flex-shrink-0"><path d="M22 11.08V12a10 10 0 1 1-5.93-8.77"/></svg>
+                                Planejamento Estratégico Digital.
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle text-roxo-primario flex-shrink-0"><path d="M22 11.08V12a10 10 0 1 1-5.93-8.77"/></svg>
+                                Análise e Otimização de Processos Internos.
+                            </li>
+                        </ul>
                     </div>
-                    <!-- CNH -->
-                    <div class="service-card p-6 bg-gray-800 rounded-lg shadow-lg flex flex-col justify-between">
-                        <div>
-                            <h3 class="text-xl font-bold text-white mb-2">Carteira de Motorista (CNH)</h3>
-                            <p class="text-gray-400 text-sm mb-4">Simplifique processos como renovação, 2ª via e alteração de dados na sua CNH.</p>
-                            <ul class="list-disc list-inside text-gray-400 text-sm">
-                                <li>Renovação da CNH.</li>
-                                <li>Emissão de 2ª via.</li>
-                                <li>Alteração de dados e adição/baixa de categoria.</li>
-                            </ul>
-                        </div>
-                        <a href="https://wa.me/11965391331?text=Olá, tenho interesse nos serviços de CNH." target="_blank" class="mt-4 inline-block bg-lilac text-white font-bold py-2 px-4 rounded-full text-center hover:bg-lilac/90 transition-colors">
-                            Fale conosco
-                        </a>
+                    <div class="md:w-1/2 mt-8 md:mt-0">
+                        <img src="https://placehold.co/600x400/181a28/ffffff?text=Consultoria+Estrategica" alt="Imagem ilustrativa para o serviço de Consultoria Estratégica" class="rounded-lg shadow-xl">
                     </div>
-                    <!-- Assessoria Tributária -->
-                    <div class="service-card p-6 bg-gray-800 rounded-lg shadow-lg flex flex-col justify-between">
-                        <div>
-                            <h3 class="text-xl font-bold text-white mb-2">Assessoria Tributária</h3>
-                            <p class="text-gray-400 text-sm mb-4">Garantimos a sua tranquilidade com a Receita Federal. Cuidamos da sua declaração e pendências fiscais.</p>
-                            <ul class="list-disc list-inside text-gray-400 text-sm">
-                                <li>Declaração do Imposto de Renda.</li>
-                                <li>Regularização de pendências fiscais.</li>
-                                <li>Orientação sobre restituição e parcelamentos.</li>
-                            </ul>
-                        </div>
-                        <a href="https://wa.me/11965391331?text=Olá, tenho interesse na Assessoria Tributária." target="_blank" class="mt-4 inline-block bg-lilac text-white font-bold py-2 px-4 rounded-full text-center hover:bg-lilac/90 transition-colors">
-                            Fale conosco
-                        </a>
-                    </div>
-                </div>
-
-                <h2 class="text-2xl sm:text-3xl font-bold text-white leading-tight mb-8">Soluções de Marketing e Negócios Digitais</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-                    <!-- Design Gráfico -->
-                    <div class="service-card p-6 bg-gray-800 rounded-lg shadow-lg flex flex-col justify-between">
-                        <div>
-                            <h3 class="text-xl font-bold text-white mb-2">Design Gráfico</h3>
-                            <p class="text-gray-400 text-sm">Criação de identidade visual e materiais que fazem sua marca se destacar.</p>
-                        </div>
-                        <a href="https://wa.me/11965391331?text=Olá, tenho interesse no serviço de Design Gráfico." target="_blank" class="mt-4 inline-block bg-lilac text-white font-bold py-2 px-4 rounded-full text-center hover:bg-lilac/90 transition-colors">
-                            Fale conosco
-                        </a>
-                    </div>
-                    <!-- Criação de Sites -->
-                    <div class="service-card p-6 bg-gray-800 rounded-lg shadow-lg flex flex-col justify-between">
-                        <div>
-                            <h3 class="text-xl font-bold text-white mb-2">Criação de Sites e Landing Pages</h3>
-                            <p class="text-gray-400 text-sm">Desenvolvimento de sites profissionais para atrair e converter clientes.</p>
-                        </div>
-                        <a href="https://wa.me/11965391331?text=Olá, tenho interesse em Criação de Sites e Landing Pages." target="_blank" class="mt-4 inline-block bg-lilac text-white font-bold py-2 px-4 rounded-full text-center hover:bg-lilac/90 transition-colors">
-                            Fale conosco
-                        </a>
-                    </div>
-                    <!-- Gestão de Redes Sociais -->
-                    <div class="service-card p-6 bg-gray-800 rounded-lg shadow-lg flex flex-col justify-between">
-                        <div>
-                            <h3 class="text-xl font-bold text-white mb-2">Gestão de Redes Sociais</h3>
-                            <p class="text-gray-400 text-sm">Estratégias para construir sua presença digital e engajar sua audiência.</p>
-                        </div>
-                        <a href="https://wa.me/11965391331?text=Olá, tenho interesse na Gestão de Redes Sociais." target="_blank" class="mt-4 inline-block bg-lilac text-white font-bold py-2 px-4 rounded-full text-center hover:bg-lilac/90 transition-colors">
-                            Fale conosco
-                        </a>
-                    </div>
-                    <!-- Tráfego Pago -->
-                    <div class="service-card p-6 bg-gray-800 rounded-lg shadow-lg flex flex-col justify-between">
-                        <div>
-                            <h3 class="text-xl font-bold text-white mb-2">Anúncios Online (Tráfego Pago)</h3>
-                            <p class="text-gray-400 text-sm">Campanhas no Google e redes sociais para atrair clientes qualificados.</p>
-                        </div>
-                        <a href="https://wa.me/11965391331?text=Olá, tenho interesse em Anúncios Online (Tráfego Pago)." target="_blank" class="mt-4 inline-block bg-lilac text-white font-bold py-2 px-4 rounded-full text-center hover:bg-lilac/90 transition-colors">
-                            Fale conosco
-                        </a>
-                    </div>
-                    <!-- Gestão de Processos Internos -->
-                    <div class="service-card p-6 bg-gray-800 rounded-lg shadow-lg flex flex-col justify-between">
-                        <div>
-                            <h3 class="text-xl font-bold text-white mb-2">Gestão de Processos Internos</h3>
-                            <p class="text-gray-400 text-sm">Otimização de fluxos de trabalho para mais eficiência e produtividade.</p>
-                        </div>
-                        <a href="https://wa.me/11965391331?text=Olá, tenho interesse na Gestão de Processos Internos." target="_blank" class="mt-4 inline-block bg-lilac text-white font-bold py-2 px-4 rounded-full text-center hover:bg-lilac/90 transition-colors">
-                            Fale conosco
-                        </a>
-                    </div>
-                </div>
-
-                <div class="flex items-center justify-center text-center">
-                    <p class="text-xl font-bold text-gray-400 max-w-2xl mx-auto">
-                        A Agência Atthos atua como um facilitador de serviços, não como um órgão governamental.
-                    </p>
                 </div>
             </div>
         </section>
-
-        <footer class="bg-gray-950 py-12">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap justify-between items-start gap-8">
-                <div class="w-full md:w-auto text-center md:text-left mb-6 md:mb-0">
-                    <h4 class="text-2xl font-bold text-white mb-2">Agência Atthos</h4>
-                    <p class="text-sm text-gray-400">Suporte digital, simplificado.</p>
+    
+        <section id="suporte-digital" class="py-12">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="md:flex md:items-center md:justify-between gap-8 flex-row-reverse">
+                    <div class="md:w-1/2">
+                        <h2 class="text-3xl font-bold font-titulos text-lilas-complementar">Suporte Digital</h2>
+                        <p class="mt-4 text-cinza-medio leading-relaxed">
+                            A tecnologia pode ser complicada. Nosso suporte digital simplifica sua vida, auxiliando em tarefas como configuração de ferramentas, automação, e otimização de sistemas.
+                        </p>
+                        <ul class="mt-6 space-y-4 text-cinza-medio">
+                            <li class="flex items-start gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle text-roxo-primario flex-shrink-0"><path d="M22 11.08V12a10 10 0 1 1-5.93-8.77"/></svg>
+                                Configuração de Ferramentas de Automação (RD Station, Hubspot).
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle text-roxo-primario flex-shrink-0"><path d="M22 11.08V12a10 10 0 1 1-5.93-8.77"/></svg>
+                                Otimização e Limpeza de Bancos de Dados.
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle text-roxo-primario flex-shrink-0"><path d="M22 11.08V12a10 10 0 1 1-5.93-8.77"/></svg>
+                                Suporte para Ferramentas de Gestão (Notion, Trello, Asana).
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="md:w-1/2 mt-8 md:mt-0">
+                        <img src="https://placehold.co/600x400/1e293b/ffffff?text=Suporte+Digital" alt="Imagem ilustrativa para o serviço de Suporte Digital" class="rounded-lg shadow-xl">
+                    </div>
                 </div>
-                <div class="flex flex-col items-center md:items-start text-center md:text-left mb-6 md:mb-0">
-                    <h4 class="text-xl font-semibold text-white mb-4">Navegação</h4>
-                    <ul class="space-y-2 text-sm text-gray-400">
-                        <li><a href="index.html" class="hover:text-lilac transition-colors">Home</a></li>
-                        <li><a href="servicos.html" class="hover:text-lilac transition-colors">Serviços</a></li>
-                        <li><a href="quemsomos.html" class="hover:text-lilac transition-colors">Quem Somos</a></li>
-                        <li><a href="blog-atthos.html" class="hover:text-lilac transition-colors">Blog</a></li>
-                        <li><a href="contato.html" class="hover:text-lilac transition-colors">Contato</a></li>
+            </div>
+        </section>
+    
+        <section id="marketing-e-negocios" class="py-12 bg-cards-surfaces">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="md:flex md:items-center md:justify-between gap-8">
+                    <div class="md:w-1/2">
+                        <h2 class="text-3xl font-bold font-titulos text-lilas-complementar">Marketing e Negócios Digitais</h2>
+                        <p class="mt-4 text-cinza-medio leading-relaxed">
+                            Crescemos junto com você. Nossas soluções de marketing digital são focadas em resultados reais, desde o planejamento até a implementação e análise.
+                        </p>
+                        <ul class="mt-6 space-y-4 text-cinza-medio">
+                            <li class="flex items-start gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle text-roxo-primario flex-shrink-0"><path d="M22 11.08V12a10 10 0 1 1-5.93-8.77"/></svg>
+                                Gestão de Tráfego Pago (Google Ads, Meta Ads).
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle text-roxo-primario flex-shrink-0"><path d="M22 11.08V12a10 10 0 1 1-5.93-8.77"/></svg>
+                                Automação de Marketing.
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle text-roxo-primario flex-shrink-0"><path d="M22 11.08V12a10 10 0 1 1-5.93-8.77"/></svg>
+                                Otimização de Funis de Venda.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="md:w-1/2 mt-8 md:mt-0">
+                        <img src="https://placehold.co/600x400/181a28/ffffff?text=Marketing+e+Negocios+Digitais" alt="Imagem ilustrativa para o serviço de Marketing e Negócios Digitais" class="rounded-lg shadow-xl">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="bg-principal-background text-cinza-medio py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-texto-principal font-bold text-lg mb-4">Agência Atthos</h3>
+                    <p class="text-sm">Suporte digital, simplificado.</p>
+                </div>
+                <div>
+                    <h3 class="text-texto-principal font-bold text-lg mb-4">Navegação</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-roxo-primario transition-colors">Home</a></li>
+                        <li><a href="servicos.html" class="hover:text-roxo-primario transition-colors">Serviços</a></li>
+                        <li><a href="quemsomos.html" class="hover:text-roxo-primario transition-colors">Quem Somos</a></li>
+                        <li><a href="blog-atthos.html" class="hover:text-roxo-primario transition-colors">Blog</a></li>
+                        <li><a href="contato.html" class="hover:text-roxo-primario transition-colors">Contato</a></li>
                     </ul>
                 </div>
-                <div class="flex flex-col items-center md:items-start text-center md:text-left">
-                    <h4 class="text-xl font-semibold text-white mb-4">Siga-nos</h4>
+                <div>
+                    <h3 class="text-texto-principal font-bold text-lg mb-4">Comunidade</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-roxo-primario transition-colors">Comunidade</a></li>
+                        <li><a href="#" class="hover:text-roxo-primario transition-colors">FAQ</a></li>
+                        <li><a href="#" class="hover:text-roxo-primario transition-colors">Termos de Serviço</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-texto-principal font-bold text-lg mb-4">Siga-nos</h3>
                     <div class="flex space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-lilac transition-colors" aria-label="Facebook">
+                        <a href="https://wa.me/SEU-NUMERO-WHATSAPP" class="text-cinza-medio hover:text-roxo-primario transition-colors" target="_blank" aria-label="WhatsApp">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-circle-code"><path d="M7.9 20A9 9 0 0 1 4 16.1L2 22l6-2"/><path d="M10.1 2.1c2.2.4 4.1 1.5 5.7 3.1"/><path d="M14 17a4 4 0 0 0-8 0"/><path d="M19 12a7 7 0 1 1 0-7c-2.4 0-4.7.9-6.5 2.5"/><path d="M13 14h-2"/><path d="m14 14 2 2 2-2"/><path d="M18 17h-2"/><path d="m16 17 2-2 2 2"/></svg>
+                        </a>
+                        <a href="https://instagram.com/agenciaatthos" class="text-cinza-medio hover:text-roxo-primario transition-colors" target="_blank" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.5" y1="6.5" y2="6.5"/></svg>
+                        </a>
+                        <a href="https://facebook.com/agenciaatthos" class="text-cinza-medio hover:text-roxo-primario transition-colors" target="_blank" aria-label="Facebook">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
                         </a>
-                        <a href="#" class="text-gray-400 hover:text-lilac transition-colors" aria-label="Instagram">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.5" y1="6.5" y2="6.5"/></svg>
-                        </a>
-                        <a href="https://wa.me/11965391331" class="text-gray-400 hover:text-lilac transition-colors" target="_blank" aria-label="WhatsApp">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-circle-code"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/><path d="M10 13a5 5 0 0 0 7.54 2.245 5 5 0 1 0-7.54-2.245z"/><path d="M11 5a5 5 0 0 1 7.54 2.245 5 5 0 1 0-7.54-2.245z"/><path d="M8 17.54a5 5 0 0 0 2.245 7.54 5 5 0 1 0-7.54-2.245z"/><path d="M13 13a5 5 0 0 0-2.245-7.54 5 5 0 1 0 7.54 2.245z"/><path d="M8 12.5a5 5 0 0 1 5-5h1.54"/></svg>
+                        <a href="https://twitter.com/agenciaatthos" class="text-cinza-medio hover:text-roxo-primario transition-colors" target="_blank" aria-label="Twitter">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-twitter"><path d="M22 4s-.7 2.1-2 3.4c-.7.6-1.5 1-2.4 1.2.9-.6 1.5-1.4 1.8-2.5.9.1 1.7.3 2.5.6-.9.8-2 1.4-3.3 1.8-1.5 1-3 1.5-4.6 1.6-1.1.1-2.2 0-3.3-.2C10 16.5 7.6 16.1 6.1 15c-.9.5-1.8 1-2.8 1.2-1.2.2-2.3 0-3.3-.2.8.5 1.5.9 2.3 1.2-1.2.9-2.2 2-2.8 3.4.9-.5 1.8-.8 2.8-.8 1.4 0 2.7.5 3.8 1.4-.8.9-1.5 1.9-2.2 3.1-.9-.5-1.8-1.2-2.6-1.9-.8-1-1.3-2.1-1.7-3.3"/></svg>
                         </a>
                     </div>
                 </div>
             </div>
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mt-10 pt-8 border-t border-gray-800">
-                <p class="text-sm text-gray-500">&copy; <span id="current-year">2024</span> Agência Atthos. Todos os direitos reservados.</p>
+            <div class="border-t border-cards-surfaces mt-8 pt-8 text-center text-sm text-cinza-medio">
+                © 2024 Agência Atthos. Todos os direitos reservados.
             </div>
-        </footer>
-
-    </main>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const mobileMenu = document.getElementById('mobile-menu');
-            const menuBtn = document.getElementById('menu-btn');
-            
-            menuBtn.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-            
-            // Close mobile menu when a link is clicked
-            mobileMenu.addEventListener('click', (e) => {
-                if (e.target.tagName === 'A') {
-                    mobileMenu.classList.add('hidden');
-                }
-            });
-            
-            const currentYear = new Date().getFullYear();
-            document.getElementById('current-year').textContent = currentYear;
-        });
-    </script>
+        </div>
+    </footer>
+    
 </body>
 </html>

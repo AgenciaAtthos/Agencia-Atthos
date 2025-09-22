@@ -1,30 +1,73 @@
-Agência Atthos  - Hub de serviços e Suporte digital
+🌐 Comunidade e Agência Atthos
 
----
+Bem-vindo ao repositório do site oficial da Agência Atthos e da Comunidade Atthos! Aqui você encontra soluções digitais práticas para negócios e um espaço de aprendizado e networking.
 
-# 🛠️ Tecnologias Utilizadas
+Slogan: Da Ideia ao Resultado: Marketing e Gestão para o Seu Negócio. 🚀
 
-### HTML5: A base da estrutura da página.
+💻 Estrutura do Site
 
-### Tailwind CSS: Para estilização moderna e responsiva.
+🏠 Home: Introdução, proposta de valor e resumo dos serviços.
 
-### -JavaScript: Para interatividade, como o menu mobile.
+🛠 Serviços: Design, Sites, Social Media, Anúncios Online e Gestão de Processos.
 
-### Google Fonts (Inter): Uma fonte utilizada para a tipografia.
+📈 Como Trabalhamos: Passo a passo do nosso método.
 
-### Lucide Icons: Uma biblioteca de ícones utilizada no projeto, com licença de uso comercial.
+📚 Blog / Central de Ajuda: Conteúdos atualizados no Notion.
 
-# 🔗 Links Úteis
+👥 Quem Somos: Missão, visão e valores.
 
-WhatsApp: 
-Instagram: https://www.instagram.com/agenciaatthoss
+✉️ Contato: Fale diretamente com a equipe.
 
+🫱🏼‍🫲🏾 Comunidade Atthos
 
+Conecte, aprenda e cresça!
 
+Conexões Reais: Networking com profissionais do mercado.
 
-### ⚠️ Aviso de Direitos Autorais
-Este é um projeto proprietário da **Agência Atthos**. Todos os direitos estão reservados. O uso, cópia, distribuição ou modificação deste código é estritamente proibido sem autorização expressa.
+Aprendizado Contínuo: Materiais, guias e artigos digitais.
 
+Comunidade Exclusiva: Grupo seleto para troca de experiências.
 
+🔹 O que você encontra
 
+Conteúdo prático direto no WhatsApp 📲
 
+Vagas de emprego confiáveis 💼
+
+Cursos gratuitos EAD e presenciais 🎓
+
+Suporte com currículo, LinkedIn e entrevistas 🛠
+
+Guias úteis: Imposto de Renda, boletim de ocorrência, GovBR 📑
+
+Tendências digitais e vagas de TI & internacionais 🌐
+
+📨 Newsletter e WhatsApp
+
+Newsletter: Receba tendências, vagas e conteúdos direto no e-mail 📩
+
+WhatsApp: Escolha entre notícias, conteúdos e vagas 👇
+
+Acessar Canal
+
+Entrar no Grupo
+
+⚖️ Regras da Comunidade
+
+🤝 Respeito sempre; nada de preconceitos.
+
+🚫 Proibido: pornografia, violência, discurso de ódio.
+
+🔒 Privacidade: não compartilhe dados de terceiros.
+
+⛔ Sem spam; foco em troca real.
+
+⭐ Respeite admins e moderadores.
+
+🚨 Denuncie irregularidades.
+
+🔗 Navegação Rápida
+
+🏠 Home | 🛠 Serviços | 👥 Quem Somos | 📚 Blog | 🫱🏼‍🫲🏾 Comunidade | ✉️ Contato
+
+© 2024 Agência Atthos – Suporte digital, simplificado.

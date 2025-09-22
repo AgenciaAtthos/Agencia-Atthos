@@ -13,9 +13,10 @@
                 extend: {
                     colors: {
                         'detran-blue': '#0054a3',
-                        'detran-light-blue': '#e6f1f8',
+                        'detran-light-blue': '#e6f1e8',
                         'lilac': '#C084FC',
                         'dark-gray': '#1f2937',
+                        'gray-950': '#030712'
                     },
                     fontFamily: {
                         inter: ['Inter', 'sans-serif']
@@ -69,23 +70,22 @@
 </head>
 <body class="bg-gray-100">
 
-    <!-- Header -->
-    <header class="bg-white shadow-sm">
+    <header class="bg-gray-950/80 backdrop-blur-sm shadow-sm fixed top-0 w-full z-50 border-b border-gray-800">
         <div class="container mx-auto px-4 py-6 flex flex-col md:flex-row items-center justify-between">
-            <div class="text-xl font-bold text-detran-blue">Atthos</div>
+            <div class="text-xl font-bold text-white">Atthos</div>
             <nav class="mt-4 md:mt-0">
                 <ul class="flex space-x-4">
-                    <li><a href="#" class="text-gray-600 hover:text-detran-blue font-medium transition duration-300">Home</a></li>
-                    <li><a href="#" class="text-gray-600 hover:text-detran-blue font-medium transition duration-300">Serviços</a></li>
-                    <li><a href="#" class="text-detran-blue font-semibold hover:underline transition duration-300">Blog</a></li>
-                    <li><a href="#" class="text-gray-600 hover:text-detran-blue font-medium transition duration-300">Contato</a></li>
+                    <li><a href="index.html" class="text-gray-300 hover:text-lilac font-medium transition duration-300">Home</a></li>
+                    <li><a href="servicos.html" class="text-gray-300 hover:text-lilac font-medium transition duration-300">Serviços</a></li>
+                    <li><a href="blog-atthos.html" class="text-lilac font-semibold hover:underline transition duration-300">Blog</a></li>
+                    <li><a href="comunidade-atthos.html" class="text-gray-300 hover:text-lilac font-medium transition duration-300">Comunidade</a></li>
+                    <li><a href="contato.html" class="text-gray-300 hover:text-lilac font-medium transition duration-300">Contato</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-
-    <!-- Main Content -->
-    <main class="container mx-auto px-4 py-12">
+    
+    <main class="container mx-auto px-4 py-12 mt-16">
         <section class="text-center mb-12">
             <h1 class="text-4xl md:text-5xl font-extrabold text-dark-gray leading-tight">Central de Ajuda Atthos</h1>
             <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
@@ -93,10 +93,8 @@
             </p>
         </section>
 
-        <!-- Blog Post Grid -->
         <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
 
-            <!-- Card para O que é o DETRAN -->
             <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 card">
                 <img src="https://placehold.co/600x400/0054a3/ffffff?text=DETRAN" alt="Imagem ilustrativa para o guia sobre o DETRAN" class="w-full h-48 object-cover">
                 <div class="p-6">
@@ -106,7 +104,6 @@
                 </div>
             </div>
 
-            <!-- Card para Licenciamento Anual -->
             <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 card">
                 <img src="https://placehold.co/600x400/94A3B8/ffffff?text=Licenciamento" alt="Imagem ilustrativa para o guia de Licenciamento Anual" class="w-full h-48 object-cover">
                 <div class="p-6">
@@ -116,7 +113,6 @@
                 </div>
             </div>
 
-            <!-- Card para Transferência de Veículo -->
             <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 card">
                 <img src="https://placehold.co/600x400/6B7280/ffffff?text=Transferencia" alt="Imagem ilustrativa para o guia de Transferência de Veículo" class="w-full h-48 object-cover">
                 <div class="p-6">
@@ -126,7 +122,6 @@
                 </div>
             </div>
 
-            <!-- Card para Como Recorrer de Multas -->
             <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 card">
                 <img src="https://placehold.co/600x400/4B5563/ffffff?text=Multas" alt="Imagem ilustrativa para o guia de Como Recorrer de Multas" class="w-full h-48 object-cover">
                 <div class="p-6">
@@ -136,7 +131,6 @@
                 </div>
             </div>
             
-            <!-- Card para Isenção de PCD -->
             <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 card">
                 <img src="https://placehold.co/600x400/292524/ffffff?text=Isencao+PCD" alt="Imagem ilustrativa para o guia de Isenção para PCD" class="w-full h-48 object-cover">
                 <div class="p-6">
@@ -146,7 +140,6 @@
                 </div>
             </div>
             
-            <!-- Card para Primeiro Emplacamento -->
             <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 card">
                 <img src="https://placehold.co/600x400/D1D5DB/ffffff?text=Emplacamento" alt="Imagem ilustrativa para o guia de Primeiro Emplacamento" class="w-full h-48 object-cover">
                 <div class="p-6">
@@ -156,7 +149,6 @@
                 </div>
             </div>
 
-            <!-- Card para Como Pagar o IPVA -->
             <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 card">
                 <img src="https://placehold.co/600x400/FACC15/ffffff?text=IPVA" alt="Imagem ilustrativa para o guia de Como Pagar o IPVA" class="w-full h-48 object-cover">
                 <div class="p-6">
@@ -166,7 +158,6 @@
                 </div>
             </div>
 
-            <!-- Card para Renovação da CNH -->
             <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 card">
                 <img src="https://placehold.co/600x400/10B981/ffffff?text=CNH" alt="Imagem ilustrativa para o guia de Renovação da CNH" class="w-full h-48 object-cover">
                 <div class="p-6">
@@ -176,7 +167,6 @@
                 </div>
             </div>
 
-            <!-- Card para 2ª Via do CRV -->
             <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 card">
                 <img src="https://placehold.co/600x400/3B82F6/ffffff?text=CRV" alt="Imagem ilustrativa para o guia de 2ª Via do CRV" class="w-full h-48 object-cover">
                 <div class="p-6">
@@ -186,7 +176,6 @@
                 </div>
             </div>
 
-            <!-- Card para Indicação de Condutor Infrator -->
             <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 card">
                 <img src="https://placehold.co/600x400/EF4444/ffffff?text=Condutor+Infrator" alt="Imagem ilustrativa para o guia de Indicação de Condutor Infrator" class="w-full h-48 object-cover">
                 <div class="p-6">
@@ -196,7 +185,6 @@
                 </div>
             </div>
 
-            <!-- Card para O que é RENAINF -->
             <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 card">
                 <img src="https://placehold.co/600x400/E5E7EB/ffffff?text=RENAINF" alt="Imagem ilustrativa para o guia sobre o RENAINF" class="w-full h-48 object-cover">
                 <div class="p-6">
@@ -206,7 +194,6 @@
                 </div>
             </div>
 
-            <!-- Card para O que é a Conta gov -->
             <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 card">
                 <img src="https://placehold.co/600x400/4F46E5/ffffff?text=Conta+Gov" alt="Imagem ilustrativa para o guia sobre a Conta gov.br" class="w-full h-48 object-cover">
                 <div class="p-6">
@@ -218,11 +205,9 @@
 
         </section>
 
-        <!-- Seção de Guias de Serviços Digitais Veiculares (Conteúdo Expansível) -->
         <section class="mt-20">
             <h2 class="text-3xl md:text-4xl font-extrabold text-dark-gray text-center mb-8">Guias de Serviços Digitais Veiculares</h2>
 
-            <!-- Guia: O que é o DETRAN? -->
             <div id="detran-completo" class="bg-white rounded-xl shadow-lg mb-6">
                 <div class="collapsible-header flex items-center justify-between p-6">
                     <h3 class="text-xl font-bold text-detran-blue">Guia Rápido - O que é o DETRAN</h3>
@@ -243,7 +228,6 @@
                 </div>
             </div>
 
-            <!-- Guia: Licenciamento Anual de Veículo -->
             <div id="licenciamento-completo" class="bg-white rounded-xl shadow-lg mb-6">
                 <div class="collapsible-header flex items-center justify-between p-6">
                     <h3 class="text-xl font-bold text-detran-blue">Guia Completo de Licenciamento Anual de Veículo</h3>
@@ -273,7 +257,6 @@
                 </div>
             </div>
 
-            <!-- Guia: Transferência de Veículo -->
             <div id="transferencia-completo" class="bg-white rounded-xl shadow-lg mb-6">
                 <div class="collapsible-header flex items-center justify-between p-6">
                     <h3 class="text-xl font-bold text-detran-blue">Guia Completo de Transferência de Veículo</h3>
@@ -303,7 +286,6 @@
                 </div>
             </div>
             
-            <!-- Guia: Como Recorrer de Multas -->
             <div id="multas-completo" class="bg-white rounded-xl shadow-lg mb-6">
                 <div class="collapsible-header flex items-center justify-between p-6">
                     <h3 class="text-xl font-bold text-detran-blue">Guia de Recurso de Multas</h3>
@@ -333,7 +315,6 @@
                 </div>
             </div>
 
-            <!-- Guia: Isenção para PCD -->
             <div id="isencao-pcd-completo" class="bg-white rounded-xl shadow-lg mb-6">
                 <div class="collapsible-header flex items-center justify-between p-6">
                     <h3 class="text-xl font-bold text-detran-blue">Guia de Isenção para PCD</h3>
@@ -363,7 +344,6 @@
                 </div>
             </div>
 
-            <!-- Guia: Primeiro Emplacamento -->
             <div id="emplacamento-completo" class="bg-white rounded-xl shadow-lg mb-6">
                 <div class="collapsible-header flex items-center justify-between p-6">
                     <h3 class="text-xl font-bold text-detran-blue">Guia de Primeiro Emplacamento</h3>
@@ -397,7 +377,6 @@
                 </div>
             </div>
 
-            <!-- Guia: Como Pagar o IPVA -->
             <div id="ipva-completo" class="bg-white rounded-xl shadow-lg mb-6">
                 <div class="collapsible-header flex items-center justify-between p-6">
                     <h3 class="text-xl font-bold text-detran-blue">Como Pagar o IPVA</h3>
@@ -426,7 +405,6 @@
                 </div>
             </div>
 
-            <!-- Guia: Renovação da CNH -->
             <div id="cnh-completo" class="bg-white rounded-xl shadow-lg mb-6">
                 <div class="collapsible-header flex items-center justify-between p-6">
                     <h3 class="text-xl font-bold text-detran-blue">Guia de Renovação da CNH</h3>
@@ -455,7 +433,6 @@
                 </div>
             </div>
 
-            <!-- Guia: 2ª Via do CRV -->
             <div id="crv-completo" class="bg-white rounded-xl shadow-lg mb-6">
                 <div class="collapsible-header flex items-center justify-between p-6">
                     <h3 class="text-xl font-bold text-detran-blue">Guia Rápido - 2ª Via do CRV</h3>
@@ -484,7 +461,6 @@
                 </div>
             </div>
 
-            <!-- Guia: Indicação de Condutor Infrator -->
             <div id="condutor-infrator-completo" class="bg-white rounded-xl shadow-lg mb-6">
                 <div class="collapsible-header flex items-center justify-between p-6">
                     <h3 class="text-xl font-bold text-detran-blue">Guia Rápido - Indicação de Condutor Infrator</h3>
@@ -513,7 +489,6 @@
                 </div>
             </div>
 
-            <!-- Guia: O que é RENAINF -->
             <div id="renainf-completo" class="bg-white rounded-xl shadow-lg mb-6">
                 <div class="collapsible-header flex items-center justify-between p-6">
                     <h3 class="text-xl font-bold text-detran-blue">Guia Rápido - O que é RENAINF?</h3>
@@ -529,7 +504,6 @@
                 </div>
             </div>
 
-            <!-- Guia: O que é a Conta gov? -->
             <div id="conta-gov-completo" class="bg-white rounded-xl shadow-lg mb-6">
                 <div class="collapsible-header flex items-center justify-between p-6">
                     <h3 class="text-xl font-bold text-detran-blue">Guia Rápido - O que é a Conta gov?</h3>
@@ -560,7 +534,6 @@
 
         </section>
         
-        <!-- Call to Action -->
         <section class="mt-20 text-center bg-detran-light-blue rounded-xl p-8 shadow-inner">
             <h2 class="text-3xl font-bold text-detran-blue mb-4">Ainda tem alguma dúvida?</h2>
             <p class="text-gray-700 text-lg mb-6">Fale conosco agora mesmo via WhatsApp para um suporte rápido ou por e-mail.</p>
@@ -576,7 +549,6 @@
 
     </main>
 
-    <!-- Footer -->
     <footer class="bg-detran-blue text-white py-8 mt-12">
         <div class="container mx-auto px-4 text-center">
             <p class="text-sm opacity-80">&copy; 2025 Central de Ajuda Atthos. Todos os direitos reservados.</p>
