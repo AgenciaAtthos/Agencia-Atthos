@@ -45,5 +45,20 @@ Git + GitHub para versionamento
 Responsividade:
 O site será totalmente adaptável para mobile, desktop e tablet, funcionando em qualquer navegador.
 
+# 🔗 Links Úteis
+
+Aqui estão os canais para saber mais sobre a Agência Atthos:
+
+WhatsApp: https://wa.me/5599999999999
+
+Instagram: https://www.instagram.com/agenciaatthos
+
+LinkedIn: https://www.linkedin.com/company/agenciaatthos
+
+### ⚠️ Aviso de Direitos Autorais
+
+Este é um projeto proprietário da **Agência Atthos**. Todos os direitos estão reservados. O uso, cópia, distribuição ou modificação deste código é estritamente proibido sem autorização expressa.
+
+
 
 © 2024 Agência Atthos – Suporte digital, simplificado.
