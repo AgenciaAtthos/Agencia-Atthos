@@ -1,73 +1,49 @@
-🌐 Comunidade e Agência Atthos
+🌐 Agência Atthos 
 
-Bem-vindo ao repositório do site oficial da Agência Atthos e da Comunidade Atthos! Aqui você encontra soluções digitais práticas para negócios e um espaço de aprendizado e networking.
 
-Slogan: Da Ideia ao Resultado: Marketing e Gestão para o Seu Negócio. 🚀
+Bem-vindo(a) ao repositório oficial da Agência Atthos!
 
-💻 Estrutura do Site
+Aqui você encontra um resumo sobre o nosso trabalho de suporte digital para negócios e também um espaço de aprendizado.
 
-🏠 Home: Introdução, proposta de valor e resumo dos serviços.
+# 💻 Estrutura do Site
 
-🛠 Serviços: Design, Sites, Social Media, Anúncios Online e Gestão de Processos.
+🏠 Home: Introdução à Agência Atthos, nossa proposta de valor e um resumo dos serviços.
 
-📈 Como Trabalhamos: Passo a passo do nosso método.
+🛠 Serviços: 
 
-📚 Blog / Central de Ajuda: Conteúdos atualizados no Notion.
+Detalhes sobre o que oferecemos: 
+Design, Criação de Sites, Gestão de Redes Sociais, Anúncios Online e Gestão de Processos.
 
-👥 Quem Somos: Missão, visão e valores.
+📈 Como Trabalhamos: 
+Nosso método de trabalho, explicado passo a passo para garantir transparência e eficiência.
 
-✉️ Contato: Fale diretamente com a equipe.
+📚 Blog / Central de Ajuda: 
+Conteúdos relevantes e atualizados para te ajudar a resolver suas dúvidas.
 
-🫱🏼‍🫲🏾 Comunidade Atthos
+👥 Quem Somos: 
+Conheça nossa missão, visão e valores.
 
-Conecte, aprenda e cresça!
+✉️ Contato: 
+Entre em contato diretamente com a nossa equipe.
 
-Conexões Reais: Networking com profissionais do mercado.
 
-Aprendizado Contínuo: Materiais, guias e artigos digitais.
+# Tecnologias Utilizadas:
 
-Comunidade Exclusiva: Grupo seleto para troca de experiências.
+HTML5
 
-🔹 O que você encontra
+Tailwind CSS
 
-Conteúdo prático direto no WhatsApp 📲
+JavaScript
 
-Vagas de emprego confiáveis 💼
+Google Fonts / fontsource.org
 
-Cursos gratuitos EAD e presenciais 🎓
+Ícones: Heroicons, Feather, Flaticon
 
-Suporte com currículo, LinkedIn e entrevistas 🛠
+Git + GitHub para versionamento
 
-Guias úteis: Imposto de Renda, boletim de ocorrência, GovBR 📑
 
-Tendências digitais e vagas de TI & internacionais 🌐
+Responsividade:
+O site será totalmente adaptável para mobile, desktop e tablet, funcionando em qualquer navegador.
 
-📨 Newsletter e WhatsApp
-
-Newsletter: Receba tendências, vagas e conteúdos direto no e-mail 📩
-
-WhatsApp: Escolha entre notícias, conteúdos e vagas 👇
-
-Acessar Canal
-
-Entrar no Grupo
-
-⚖️ Regras da Comunidade
-
-🤝 Respeito sempre; nada de preconceitos.
-
-🚫 Proibido: pornografia, violência, discurso de ódio.
-
-🔒 Privacidade: não compartilhe dados de terceiros.
-
-⛔ Sem spam; foco em troca real.
-
-⭐ Respeite admins e moderadores.
-
-🚨 Denuncie irregularidades.
-
-🔗 Navegação Rápida
-
-🏠 Home | 🛠 Serviços | 👥 Quem Somos | 📚 Blog | 🫱🏼‍🫲🏾 Comunidade | ✉️ Contato
 
 © 2024 Agência Atthos – Suporte digital, simplificado.
