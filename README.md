@@ -1,59 +1,48 @@
-🌐 Agência Atthos 
+# Site da Agência Atthos
 
+Este repositório contém os arquivos de código-fonte para o site da Agência Atthos. Ele foi reestruturado para ter uma paleta de cores consistente e um design de cabeçalho e rodapé padronizado em todas as páginas.
 
-Bem-vindo(a) ao repositório oficial da Agência Atthos!
+## Estrutura do Projeto
 
-Aqui você encontra um resumo sobre o nosso trabalho de suporte digital para negócios e também um espaço de aprendizado.
+* **`index.html`**: Página inicial do site, com informações sobre a agência e serviços.
+* **`servicos.html`**: Detalha os serviços oferecidos.
+* **`quemsomos.html`**: Apresenta a missão, visão e valores da agência.
+* **`contato.html`**: Formulário de contato e informações de contato.
+* **`comunidade-atthos.html`**: Página sobre a comunidade da agência.
+* **`blog-atthos.html`**: Seção de blog/FAQ.
+* **`tailwind.config.js`**: Arquivo de configuração do Tailwind CSS, onde a nova paleta de cores e fontes do site estão definidas.
+* **`style.css`**: Contém estilos CSS personalizados e utilitários.
+* **`script.js`**: Arquivo JavaScript para o menu de navegação responsivo e funcionalidades do blog.
 
-# 💻 Estrutura do Site
+## Paleta de Cores
 
-🏠 Home: Introdução à Agência Atthos, nossa proposta de valor e um resumo dos serviços.
+A nova paleta de cores é baseada em tons de cinza com um toque de laranja para os destaques.
 
-🛠 Serviços: 
+| Nome da Cor | Código HEX | Uso |
+| :--- | :--- | :--- |
+| `laranja-primario` | `#FF5722` | Destaques, botões e links em hover. |
+| `laranja-claro-hover` | `#FF7043` | Variação do laranja para interações. |
+| `cinza-complementar` | `#424242` | Elementos de apoio, ícones. |
+| `fundo-principal` | `#121212` | Fundo principal do site. |
+| `fundo-cards` | `#212121` | Fundo de cartões e seções secundárias. |
+| `branco-suave` | `#E0E0E0` | Texto principal. |
+| `cinza-medio` | `#BDBDBD` | Texto secundário e legendas. |
+| `cinza-escuro` | `#757575` | Linhas de separação e detalhes. |
 
-Detalhes sobre o que oferecemos: 
-Design, Criação de Sites, Gestão de Redes Sociais, Anúncios Online e Gestão de Processos.
+## Como Iniciar
 
-📈 Como Trabalhamos: 
-Nosso método de trabalho, explicado passo a passo para garantir transparência e eficiência.
-
-📚 Blog / Central de Ajuda: 
-Conteúdos relevantes e atualizados para te ajudar a resolver suas dúvidas.
-
-👥 Quem Somos: 
-Conheça nossa missão, visão e valores.
-
-✉️ Contato: 
-Entre em contato diretamente com a nossa equipe.
-
-
-# Tecnologias Utilizadas:
-
-HTML5
-
-Tailwind CSS
-
-JavaScript
-
-Google Fonts / fontsource.org
-
-Ícones: Heroicons, Feather, Flaticon
-
-Git + GitHub para versionamento
-
-
-Responsividade:
-O site será totalmente adaptável para mobile, desktop e tablet, funcionando em qualquer navegador.
+1.  Clone ou baixe os arquivos para o seu ambiente local.
+2.  Abra qualquer arquivo `.html` em seu navegador para visualizar o site.
+3.  Para modificar as cores ou o design, edite os arquivos `tailwind.config.js` e `style.css`.
 
 # 🔗 Links Úteis
 
 Aqui estão os canais para saber mais sobre a Agência Atthos:
 
-WhatsApp: https://wa.me/5599999999999
+Bio: https://keepo.io/agencia_atthos/
 
-Instagram: https://www.instagram.com/agenciaatthos
+Instagram: https://www.instagram.com/agencia_atthos
 
-LinkedIn: https://www.linkedin.com/company/agenciaatthos
 
 ### ⚠️ Aviso de Direitos Autorais
 

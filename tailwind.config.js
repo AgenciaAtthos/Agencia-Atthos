@@ -3,17 +3,16 @@ tailwind.config = {
         extend: {
             colors: {
                 // Destaques
-                'roxo-primario': '#805AD5',
-                'roxo-claro-hover': '#9F7AEA',
-                'lilas-complementar': '#7116AA',
+                'laranja-primario': '#FF5722',
+                'laranja-claro-hover': '#FF7043',
+                'cinza-complementar': '#424242',
                 // Fundos
-                'principal-background': '#0E0E10',
-                'azul-profundo': '#0F1D41',
-                'cards-surfaces': '#18181B',
+                'fundo-principal': '#121212',
+                'fundo-cards': '#212121',
                 // Texto
-                'branco-suave': '#F5F5F7',
-                'cinza-medio': '#A0A0A0',
-                'branco-quente': '#EBDDD7',
+                'branco-suave': '#E0E0E0',
+                'cinza-medio': '#BDBDBD',
+                'cinza-escuro': '#757575',
             },
             fontFamily: {
                 'titulos': ['Poppins', 'Montserrat', 'sans-serif'],
